@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="c58fd9f1-ac78-4838-aa24-8d634c9b6dae">
+  <producedTypes>
+    <objectType typeId="06aeb357-4a9e-4a7b-8d2c-e88262731341" valueTypeId="57a2ce92-dce9-4e4f-95a3-692b9b66cbb8"/>
+    <refType typeId="b20ed150-887a-4e63-9b75-e6d6addf5614" valueTypeId="5fe0bf53-d3b0-4825-a54a-90794e1034f7"/>
+    <selectionType typeId="e263e4a3-4e7f-4030-afa4-2a0a411f05ff" valueTypeId="7f52b0ed-4a00-4dcc-841b-cbab07bbb077"/>
+    <listType typeId="f6327f59-e7b2-41d0-90b6-8df552982c76" valueTypeId="76893902-93eb-4394-bd80-dcd41ee54e91"/>
+    <managerType typeId="f1be8f93-dff9-43d5-b1e9-40ac15bde0fa" valueTypeId="e57d1911-8ee1-45b2-98eb-885eeafb93d8"/>
+  </producedTypes>
+  <name>Сотрудники</name>
+  <synonym>
+    <key>ru</key>
+    <value>Сотрудники</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Catalog.Сотрудники.StandardAttribute.Code</inputByString>
+  <inputByString>Catalog.Сотрудники.StandardAttribute.Description</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Description</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ф.И.О.</value>
+    </synonym>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+  </standardAttributes>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <objectPresentation>
+    <key>ru</key>
+    <value>Сотрудник</value>
+  </objectPresentation>
+  <extendedListPresentation>
+    <key>ru</key>
+    <value>Список сотрудников</value>
+  </extendedListPresentation>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <codeLength>9</codeLength>
+  <descriptionLength>50</descriptionLength>
+  <codeType>String</codeType>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+  <tabularSections uuid="1b92fcf2-07c4-4871-9282-132596177f07">
+    <producedTypes>
+      <objectType typeId="ddbc2f0f-0f2a-4619-8b13-f271fa826426" valueTypeId="e0fae534-8c10-4133-bfd7-fc40f3a149da"/>
+      <rowType typeId="ab34d627-9cf4-417f-a02f-117ca78cfce1" valueTypeId="6b7e156b-0e4b-46f4-8e44-189fc032990e"/>
+    </producedTypes>
+    <name>ТрудоваяДеятельность</name>
+    <synonym>
+      <key>ru</key>
+      <value>Трудовая деятельность</value>
+    </synonym>
+  </tabularSections>
+</mdclass:Catalog>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Configuration xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="9649a240-ec50-4034-ab91-8dab535b2bc9">
+  <name>Услуги</name>
+  <synonym>
+    <key>ru</key>
+    <value>Бытовые услуги</value>
+  </synonym>
+  <containedObjects classId="9cd510cd-abfc-11d4-9434-004095e12fc7" objectId="a5b6d734-9a26-45bc-a156-abf7b7ff0e81"/>
+  <containedObjects classId="9fcd25a0-4822-11d4-9414-008048da11f9" objectId="53e5c3a7-40d3-4cbd-bf3a-e1baeff5510f"/>
+  <containedObjects classId="e3687481-0a87-462c-a166-9f34594f9bba" objectId="45dbdaba-d642-4350-9b07-e269d67d1160"/>
+  <containedObjects classId="9de14907-ec23-4a07-96f0-85521cb6b53b" objectId="d522a141-571c-4173-90bf-745a69f18dd9"/>
+  <containedObjects classId="51f2d5d8-ea4d-4064-8892-82951750031e" objectId="380174de-5bec-4eb6-9a70-1cedff539905"/>
+  <containedObjects classId="e68182ea-4237-4383-967f-90c1e3370bc7" objectId="91f4a042-81bd-4d2b-b43b-c7a0476acd8f"/>
+  <containedObjects classId="fb282519-d103-4dd3-bc12-cb271d631dfc" objectId="d6fb7be0-a960-4ad6-869b-eb74bc673160"/>
+  <configurationExtensionCompatibilityMode>8.3.21</configurationExtensionCompatibilityMode>
+  <defaultRunMode>ManagedApplication</defaultRunMode>
+  <usePurposes>PersonalComputer</usePurposes>
+  <scriptVariant>Russian</scriptVariant>
+  <usedMobileApplicationFunctionalities>
+    <functionality>
+      <use>true</use>
+    </functionality>
+    <functionality>
+      <functionality>OSBackup</functionality>
+      <use>true</use>
+    </functionality>
+  </usedMobileApplicationFunctionalities>
+  <defaultLanguage>Language.Русский</defaultLanguage>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <objectAutonumerationMode>NotAutoFree</objectAutonumerationMode>
+  <modalityUseMode>DontUse</modalityUseMode>
+  <synchronousPlatformExtensionAndAddInCallUseMode>DontUse</synchronousPlatformExtensionAndAddInCallUseMode>
+  <compatibilityMode>8.3.21</compatibilityMode>
+  <languages uuid="2b125754-96e1-4655-a9d4-f34376ceacac">
+    <name>Русский</name>
+    <synonym>
+      <key>ru</key>
+      <value>Русский</value>
+    </synonym>
+    <languageCode>ru</languageCode>
+  </languages>
+  <subsystems>Subsystem.Бухгалтерия</subsystems>
+  <subsystems>Subsystem.Бухгалтерия4</subsystems>
+  <subsystems>Subsystem.ОказаниеУслуг</subsystems>
+  <subsystems>Subsystem.Предприятие</subsystems>
+  <subsystems>Subsystem.РасчетЗарплаты</subsystems>
+</mdclass:Configuration>
