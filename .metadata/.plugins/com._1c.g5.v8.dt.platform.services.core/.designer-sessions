@@ -1,11 +1,6 @@
 #Equinox secure storage version 1.0
-#Fri Mar 03 20:24:30 MSK 2023
-/com._1c.g5.v8.dt.platform.services.core/designerConnection/6637e6d2-c7c1-4164-9df1-e600fa127f14\:8.3.21.1709/agentBaseDirectory=org.eclipse.equinox.security.linuxkeystoreintegrationjna\t5P5LOTrAuzk\=,q6uxXZw97ROYLGl71bUNYovGW4JSo512
-/com._1c.g5.v8.dt.platform.services.core/designerConnection/6637e6d2-c7c1-4164-9df1-e600fa127f14\:8.3.21.1709/userName=org.eclipse.equinox.security.linuxkeystoreintegrationjna\tQAkCplgrWOw\=,21xLGek34dY\=
-/com._1c.g5.v8.dt.platform.services.core/designerConnection/6637e6d2-c7c1-4164-9df1-e600fa127f14\:8.3.21.1709/connectionDirectory=org.eclipse.equinox.security.linuxkeystoreintegrationjna\tyZCWf5H+2EQ\=,hxsxOU1Xz/H0ndgS8YgQwJc0yidWVun3
+#Fri Mar 03 20:47:35 MSK 2023
 org.eclipse.equinox.security.preferences.version=1
-/com._1c.g5.v8.dt.platform.services.core/designerConnection/6637e6d2-c7c1-4164-9df1-e600fa127f14\:8.3.21.1709/password=org.eclipse.equinox.security.linuxkeystoreintegrationjna\tGpWhDS14U+4\=,ovQBgDQqDvc\=
 /org.eclipse.equinox.secure.storage/verification/org.eclipse.equinox.security.linuxkeystoreintegrationjna=org.eclipse.equinox.security.linuxkeystoreintegrationjna\tI5IedMxkO2w\=,8FF0aN4qvwyN8ud+KgX8jgxeAzmITbzf
 org.eclipse.equinox.security.preferences.cipher=PBEWithMD5AndDES
 org.eclipse.equinox.security.preferences.keyFactory=PBEWithMD5AndDES
-/com._1c.g5.v8.dt.platform.services.core/designerConnection/6637e6d2-c7c1-4164-9df1-e600fa127f14\:8.3.21.1709/port=org.eclipse.equinox.security.linuxkeystoreintegrationjna\tDR2AaWCR7jw\=,eRQDbJZl1bE\=
