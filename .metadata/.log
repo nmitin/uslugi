@@ -7604,3 +7604,847 @@ Caused by: org.apache.sshd.common.SshException: No more authentication methods a
 
 !ENTRY org.eclipse.egit.ui 4 0 2023-03-04 10:19:30.682
 !MESSAGE Can't connect to any repository: git@github.com:nmitin/uslugi.git (git@github.com:nmitin/uslugi.git: Cannot log in at github.com:22)
+
+!ENTRY org.eclipse.egit.core 4 0 2023-03-04 10:20:00.102
+!MESSAGE An exception occurred during push on URI git@github.com:nmitin/uslugi.git: git@github.com:nmitin/uslugi.git: Cannot log in at github.com:22
+!STACK 0
+org.eclipse.jgit.errors.TransportException: git@github.com:nmitin/uslugi.git: Cannot log in at github.com:22
+	at org.eclipse.jgit.transport.sshd.SshdSession.connect(SshdSession.java:178)
+	at org.eclipse.jgit.transport.sshd.SshdSession.connect(SshdSession.java:99)
+	at org.eclipse.jgit.transport.sshd.SshdSessionFactory.getSession(SshdSessionFactory.java:251)
+	at org.eclipse.jgit.transport.sshd.SshdSessionFactory.getSession(SshdSessionFactory.java:1)
+	at org.eclipse.jgit.transport.SshTransport.getSession(SshTransport.java:107)
+	at org.eclipse.jgit.transport.TransportGitSsh$SshPushConnection.<init>(TransportGitSsh.java:358)
+	at org.eclipse.jgit.transport.TransportGitSsh.openPush(TransportGitSsh.java:159)
+	at org.eclipse.jgit.transport.PushProcess.execute(PushProcess.java:127)
+	at org.eclipse.jgit.transport.Transport.push(Transport.java:1388)
+	at org.eclipse.egit.core.op.PushOperation.run(PushOperation.java:254)
+	at org.eclipse.egit.ui.internal.push.PushJob.performJob(PushJob.java:86)
+	at org.eclipse.egit.ui.internal.jobs.RepositoryJob.run(RepositoryJob.java:59)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.apache.sshd.common.SshException: No more authentication methods available
+	at org.apache.sshd.common.future.AbstractSshFuture.verifyResult(AbstractSshFuture.java:126)
+	at org.apache.sshd.client.future.DefaultAuthFuture.verify(DefaultAuthFuture.java:39)
+	at org.apache.sshd.client.future.DefaultAuthFuture.verify(DefaultAuthFuture.java:32)
+	at org.apache.sshd.common.future.VerifiableFuture.verify(VerifiableFuture.java:68)
+	at org.eclipse.jgit.transport.sshd.SshdSession.connect(SshdSession.java:168)
+	... 12 more
+Caused by: org.apache.sshd.common.SshException: No more authentication methods available
+	at org.apache.sshd.client.session.ClientUserAuthService.tryNext(ClientUserAuthService.java:353)
+	at org.apache.sshd.client.session.ClientUserAuthService.processUserAuth(ClientUserAuthService.java:288)
+	at org.apache.sshd.client.session.ClientUserAuthService.process(ClientUserAuthService.java:225)
+	at org.apache.sshd.common.session.helpers.AbstractSession.doHandleMessage(AbstractSession.java:526)
+	at org.apache.sshd.common.session.helpers.AbstractSession.handleMessage(AbstractSession.java:452)
+	at org.apache.sshd.common.session.helpers.AbstractSession.decode(AbstractSession.java:1524)
+	at org.apache.sshd.common.session.helpers.AbstractSession.messageReceived(AbstractSession.java:412)
+	at org.eclipse.jgit.internal.transport.sshd.JGitClientSession.messageReceived(JGitClientSession.java:197)
+	at org.apache.sshd.common.session.helpers.AbstractSessionIoHandler.messageReceived(AbstractSessionIoHandler.java:64)
+	at org.apache.sshd.common.io.nio2.Nio2Session.handleReadCycleCompletion(Nio2Session.java:359)
+	at org.apache.sshd.common.io.nio2.Nio2Session$1.onCompleted(Nio2Session.java:336)
+	at org.apache.sshd.common.io.nio2.Nio2Session$1.onCompleted(Nio2Session.java:333)
+	at org.apache.sshd.common.io.nio2.Nio2CompletionHandler.lambda$completed$0(Nio2CompletionHandler.java:38)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at org.apache.sshd.common.io.nio2.Nio2CompletionHandler.completed(Nio2CompletionHandler.java:37)
+	at java.base/sun.nio.ch.Invoker.invokeUnchecked(Invoker.java:127)
+	at java.base/sun.nio.ch.Invoker$2.run(Invoker.java:219)
+	at java.base/sun.nio.ch.AsynchronousChannelGroupImpl$1.run(AsynchronousChannelGroupImpl.java:112)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.egit.ui 4 0 2023-03-04 10:20:00.104
+!MESSAGE Can't connect to any repository: git@github.com:nmitin/uslugi.git (git@github.com:nmitin/uslugi.git: Cannot log in at github.com:22)
+
+!ENTRY org.eclipse.egit.core 4 0 2023-03-04 10:21:45.539
+!MESSAGE An exception occurred during push on URI git@github.com:nmitin/uslugi.git: git@github.com:nmitin/uslugi.git: Cannot log in at github.com:22
+!STACK 0
+org.eclipse.jgit.api.errors.TransportException: git@github.com:nmitin/uslugi.git: Cannot log in at github.com:22
+	at org.eclipse.jgit.api.PushCommand.call(PushCommand.java:159)
+	at org.eclipse.egit.core.op.PushOperation.run(PushOperation.java:283)
+	at org.eclipse.egit.ui.internal.push.PushJob.performJob(PushJob.java:86)
+	at org.eclipse.egit.ui.internal.jobs.RepositoryJob.run(RepositoryJob.java:59)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.jgit.errors.TransportException: git@github.com:nmitin/uslugi.git: Cannot log in at github.com:22
+	at org.eclipse.jgit.transport.sshd.SshdSession.connect(SshdSession.java:178)
+	at org.eclipse.jgit.transport.sshd.SshdSession.connect(SshdSession.java:99)
+	at org.eclipse.jgit.transport.sshd.SshdSessionFactory.getSession(SshdSessionFactory.java:251)
+	at org.eclipse.jgit.transport.sshd.SshdSessionFactory.getSession(SshdSessionFactory.java:1)
+	at org.eclipse.jgit.transport.SshTransport.getSession(SshTransport.java:107)
+	at org.eclipse.jgit.transport.TransportGitSsh$SshPushConnection.<init>(TransportGitSsh.java:358)
+	at org.eclipse.jgit.transport.TransportGitSsh.openPush(TransportGitSsh.java:159)
+	at org.eclipse.jgit.transport.PushProcess.execute(PushProcess.java:127)
+	at org.eclipse.jgit.transport.Transport.push(Transport.java:1388)
+	at org.eclipse.jgit.api.PushCommand.call(PushCommand.java:149)
+	... 4 more
+Caused by: org.apache.sshd.common.SshException: No more authentication methods available
+	at org.apache.sshd.common.future.AbstractSshFuture.verifyResult(AbstractSshFuture.java:126)
+	at org.apache.sshd.client.future.DefaultAuthFuture.verify(DefaultAuthFuture.java:39)
+	at org.apache.sshd.client.future.DefaultAuthFuture.verify(DefaultAuthFuture.java:32)
+	at org.apache.sshd.common.future.VerifiableFuture.verify(VerifiableFuture.java:68)
+	at org.eclipse.jgit.transport.sshd.SshdSession.connect(SshdSession.java:168)
+	... 13 more
+Caused by: org.apache.sshd.common.SshException: No more authentication methods available
+	at org.apache.sshd.client.session.ClientUserAuthService.tryNext(ClientUserAuthService.java:353)
+	at org.apache.sshd.client.session.ClientUserAuthService.processUserAuth(ClientUserAuthService.java:288)
+	at org.apache.sshd.client.session.ClientUserAuthService.process(ClientUserAuthService.java:225)
+	at org.apache.sshd.common.session.helpers.AbstractSession.doHandleMessage(AbstractSession.java:526)
+	at org.apache.sshd.common.session.helpers.AbstractSession.handleMessage(AbstractSession.java:452)
+	at org.apache.sshd.common.session.helpers.AbstractSession.decode(AbstractSession.java:1524)
+	at org.apache.sshd.common.session.helpers.AbstractSession.messageReceived(AbstractSession.java:412)
+	at org.eclipse.jgit.internal.transport.sshd.JGitClientSession.messageReceived(JGitClientSession.java:197)
+	at org.apache.sshd.common.session.helpers.AbstractSessionIoHandler.messageReceived(AbstractSessionIoHandler.java:64)
+	at org.apache.sshd.common.io.nio2.Nio2Session.handleReadCycleCompletion(Nio2Session.java:359)
+	at org.apache.sshd.common.io.nio2.Nio2Session$1.onCompleted(Nio2Session.java:336)
+	at org.apache.sshd.common.io.nio2.Nio2Session$1.onCompleted(Nio2Session.java:333)
+	at org.apache.sshd.common.io.nio2.Nio2CompletionHandler.lambda$completed$0(Nio2CompletionHandler.java:38)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at org.apache.sshd.common.io.nio2.Nio2CompletionHandler.completed(Nio2CompletionHandler.java:37)
+	at java.base/sun.nio.ch.Invoker.invokeUnchecked(Invoker.java:127)
+	at java.base/sun.nio.ch.Invoker$2.run(Invoker.java:219)
+	at java.base/sun.nio.ch.AsynchronousChannelGroupImpl$1.run(AsynchronousChannelGroupImpl.java:112)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.egit.ui 4 0 2023-03-04 10:21:45.541
+!MESSAGE Can't connect to any repository: git@github.com:nmitin/uslugi.git (git@github.com:nmitin/uslugi.git: Cannot log in at github.com:22)
+
+!ENTRY org.eclipse.ui.navigator.resources 4 0 2023-03-04 10:23:37.004
+!MESSAGE Required filter org.eclipse.ui.navigator.resources.filters.workingSet is not present. Working set support will not function correctly.
+
+!ENTRY org.eclipse.ui.navigator.resources 4 0 2023-03-04 10:23:37.005
+!MESSAGE 
+
+!ENTRY com._1c.g5.v8.dt.platform.services.core 1 0 2023-03-04 10:30:24.037
+!MESSAGE Updating connections up to associations...
+
+!ENTRY com._1c.g5.v8.dt.platform.services.core 4 0 2023-03-04 10:30:43.887
+!MESSAGE Ошибка сохранения описания сессии конфигурирования
+!STACK 0
+org.eclipse.equinox.security.storage.StorageException: No password provided.
+	at org.eclipse.equinox.internal.security.storage.SecurePreferencesRoot.getModulePassword(SecurePreferencesRoot.java:311)
+	at org.eclipse.equinox.internal.security.storage.SecurePreferencesRoot.getPassword(SecurePreferencesRoot.java:230)
+	at org.eclipse.equinox.internal.security.storage.SecurePreferences.put(SecurePreferences.java:229)
+	at org.eclipse.equinox.internal.security.storage.SecurePreferencesWrapper.put(SecurePreferencesWrapper.java:128)
+	at com._1c.g5.v8.dt.internal.platform.services.core.runtimes.execution.DesignerSessionStore.store(DesignerSessionStore.java:71)
+	at com._1c.g5.v8.dt.internal.platform.services.core.runtimes.execution.DesignerSessionPool.createConnection(DesignerSessionPool.java:382)
+	at com._1c.g5.v8.dt.internal.platform.services.core.runtimes.execution.DesignerSessionPool.acquire(DesignerSessionPool.java:247)
+	at com._1c.g5.v8.dt.platform.services.core.runtimes.execution.impl.DesignerSessionThickClientLauncher.openDesignerSession(DesignerSessionThickClientLauncher.java:207)
+	at com._1c.g5.v8.dt.internal.platform.services.core.infobases.sync.connections.DesignerSessionInfobaseConnection.openSession(DesignerSessionInfobaseConnection.java:179)
+	at com._1c.g5.v8.dt.internal.platform.services.core.infobases.sync.connections.DesignerSessionInfobaseConnection.connect(DesignerSessionInfobaseConnection.java:74)
+	at com._1c.g5.v8.dt.internal.platform.services.core.infobases.sync.connections.ParticipantAwareInfobaseConnection.connect(ParticipantAwareInfobaseConnection.java:66)
+	at com._1c.g5.v8.dt.internal.platform.services.core.infobases.sync.connections.ReconnectableInfobaseConnection.ensureConnected(ReconnectableInfobaseConnection.java:201)
+	at com._1c.g5.v8.dt.internal.platform.services.core.infobases.sync.connections.ReconnectableInfobaseConnection.loadObjects(ReconnectableInfobaseConnection.java:133)
+	at com._1c.g5.v8.dt.internal.platform.services.core.infobases.sync.strategies.AbstractSynchronizationStrategy.loadObjects(AbstractSynchronizationStrategy.java:721)
+	at com._1c.g5.v8.dt.internal.platform.services.core.infobases.sync.strategies.OnDemandSynchronizationStrategy.infobaseDatabaseUpdateRequested(OnDemandSynchronizationStrategy.java:119)
+	at com._1c.g5.v8.dt.internal.platform.services.core.infobases.sync.InfobaseSynchronization.updateConnectedInfobase(InfobaseSynchronization.java:609)
+	at com._1c.g5.v8.dt.internal.platform.services.core.infobases.sync.InfobaseSynchronizationManager.updateInfobase(InfobaseSynchronizationManager.java:262)
+	at com._1c.g5.v8.dt.platform.services.core.infobases.sync.IInfobaseSynchronizationManager$pbryglu.updateInfobase(Unknown Source)
+	at com.e1c.g5.dt.internal.applications.infobases.ui.InfobaseApplicationBehaviourDelegate.publish(InfobaseApplicationBehaviourDelegate.java:85)
+	at com.e1c.g5.dt.internal.applications.ApplicationManager.publish(ApplicationManager.java:275)
+	at com.e1c.g5.dt.applications.IApplicationManager$pbryglu.publish(Unknown Source)
+	at com.e1c.g5.dt.internal.applications.ui.ApplicationUiSupport.ensureUpdated(ApplicationUiSupport.java:117)
+	at com.e1c.g5.dt.applications.ui.IApplicationUiSupport$pbryglu.ensureUpdated(Unknown Source)
+	at com._1c.g5.v8.dt.internal.launching.ui.statushandlers.ApplicationUpdateStatusHandler.handleStatus(ApplicationUpdateStatusHandler.java:46)
+	at com._1c.g5.v8.dt.debug.core.launchconfigurations.CustomErrorHandlingLaunchDelegate.handleStatus(CustomErrorHandlingLaunchDelegate.java:209)
+	at com._1c.g5.v8.dt.launching.core.launchconfigurations.AbstractRuntimeDebugAwareLaunchDelegate.updateApplication(AbstractRuntimeDebugAwareLaunchDelegate.java:218)
+	at com._1c.g5.v8.dt.internal.launching.core.launchconfigurations.RuntimeClientLaunchDelegate.doLaunch(RuntimeClientLaunchDelegate.java:173)
+	at com._1c.g5.v8.dt.debug.core.launchconfigurations.CustomErrorHandlingLaunchDelegate.launch(CustomErrorHandlingLaunchDelegate.java:56)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:803)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1021)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1224)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.e1c.g5.dt.applications.ui 4 0 2023-03-04 10:30:44.061
+!MESSAGE Ошибка открытия соединения с информационной базой
+com._1c.g5.designer.ssh.client.DesignerClientException: Соединение с информационной базой уже установлено
+Соединение с информационной базой уже установлено
+!STACK 0
+com.e1c.g5.dt.applications.ApplicationException: Ошибка открытия соединения с информационной базой
+	at com.e1c.g5.dt.internal.applications.infobases.ui.InfobaseApplicationBehaviourDelegate.publish(InfobaseApplicationBehaviourDelegate.java:109)
+	at com.e1c.g5.dt.internal.applications.ApplicationManager.publish(ApplicationManager.java:275)
+	at com.e1c.g5.dt.applications.IApplicationManager$pbryglu.publish(Unknown Source)
+	at com.e1c.g5.dt.internal.applications.ui.ApplicationUiSupport.ensureUpdated(ApplicationUiSupport.java:117)
+	at com.e1c.g5.dt.applications.ui.IApplicationUiSupport$pbryglu.ensureUpdated(Unknown Source)
+	at com._1c.g5.v8.dt.internal.launching.ui.statushandlers.ApplicationUpdateStatusHandler.handleStatus(ApplicationUpdateStatusHandler.java:46)
+	at com._1c.g5.v8.dt.debug.core.launchconfigurations.CustomErrorHandlingLaunchDelegate.handleStatus(CustomErrorHandlingLaunchDelegate.java:209)
+	at com._1c.g5.v8.dt.launching.core.launchconfigurations.AbstractRuntimeDebugAwareLaunchDelegate.updateApplication(AbstractRuntimeDebugAwareLaunchDelegate.java:218)
+	at com._1c.g5.v8.dt.internal.launching.core.launchconfigurations.RuntimeClientLaunchDelegate.doLaunch(RuntimeClientLaunchDelegate.java:173)
+	at com._1c.g5.v8.dt.debug.core.launchconfigurations.CustomErrorHandlingLaunchDelegate.launch(CustomErrorHandlingLaunchDelegate.java:56)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:803)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1021)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1224)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: com._1c.g5.v8.dt.platform.services.core.infobases.sync.InfobaseSynchronizationException: Ошибка открытия соединения с информационной базой
+	at com._1c.g5.v8.dt.internal.platform.services.core.infobases.sync.connections.DesignerSessionInfobaseConnection.connect(DesignerSessionInfobaseConnection.java:92)
+	at com._1c.g5.v8.dt.internal.platform.services.core.infobases.sync.connections.ParticipantAwareInfobaseConnection.connect(ParticipantAwareInfobaseConnection.java:66)
+	at com._1c.g5.v8.dt.internal.platform.services.core.infobases.sync.connections.ReconnectableInfobaseConnection.ensureConnected(ReconnectableInfobaseConnection.java:201)
+	at com._1c.g5.v8.dt.internal.platform.services.core.infobases.sync.connections.ReconnectableInfobaseConnection.loadObjects(ReconnectableInfobaseConnection.java:133)
+	at com._1c.g5.v8.dt.internal.platform.services.core.infobases.sync.strategies.AbstractSynchronizationStrategy.loadObjects(AbstractSynchronizationStrategy.java:721)
+	at com._1c.g5.v8.dt.internal.platform.services.core.infobases.sync.strategies.OnDemandSynchronizationStrategy.infobaseDatabaseUpdateRequested(OnDemandSynchronizationStrategy.java:119)
+	at com._1c.g5.v8.dt.internal.platform.services.core.infobases.sync.InfobaseSynchronization.updateConnectedInfobase(InfobaseSynchronization.java:609)
+	at com._1c.g5.v8.dt.internal.platform.services.core.infobases.sync.InfobaseSynchronizationManager.updateInfobase(InfobaseSynchronizationManager.java:262)
+	at com._1c.g5.v8.dt.platform.services.core.infobases.sync.IInfobaseSynchronizationManager$pbryglu.updateInfobase(Unknown Source)
+	at com.e1c.g5.dt.internal.applications.infobases.ui.InfobaseApplicationBehaviourDelegate.publish(InfobaseApplicationBehaviourDelegate.java:85)
+	... 14 more
+Caused by: com._1c.g5.v8.dt.platform.services.core.runtimes.execution.RuntimeExecutionException: com._1c.g5.designer.ssh.client.DesignerClientException: Соединение с информационной базой уже установлено
+	at com._1c.g5.v8.dt.internal.platform.services.core.runtimes.execution.DesignerAgentConnection.open(DesignerAgentConnection.java:278)
+	at com._1c.g5.v8.dt.internal.platform.services.core.runtimes.execution.DesignerSessionPool.createConnection(DesignerSessionPool.java:395)
+	at com._1c.g5.v8.dt.internal.platform.services.core.runtimes.execution.DesignerSessionPool.acquire(DesignerSessionPool.java:247)
+	at com._1c.g5.v8.dt.platform.services.core.runtimes.execution.impl.DesignerSessionThickClientLauncher.openDesignerSession(DesignerSessionThickClientLauncher.java:207)
+	at com._1c.g5.v8.dt.internal.platform.services.core.infobases.sync.connections.DesignerSessionInfobaseConnection.openSession(DesignerSessionInfobaseConnection.java:179)
+	at com._1c.g5.v8.dt.internal.platform.services.core.infobases.sync.connections.DesignerSessionInfobaseConnection.connect(DesignerSessionInfobaseConnection.java:74)
+	... 23 more
+Caused by: com._1c.g5.designer.ssh.client.DesignerClientException: Соединение с информационной базой уже установлено
+	at com._1c.g5.internal.designer.ssh.client.operation.AbstractQuery.processExecutionResponses(AbstractQuery.java:153)
+	at com._1c.g5.internal.designer.ssh.client.operation.AbstractQuery.execute(AbstractQuery.java:134)
+	at com._1c.g5.internal.designer.ssh.client.operation.AbstractQuery.exec(AbstractQuery.java:85)
+	at com._1c.g5.v8.dt.internal.platform.services.core.runtimes.execution.DesignerAgentConnection.open(DesignerAgentConnection.java:251)
+	... 28 more
+
+!ENTRY com._1c.g5.v8.dt.platform.services.core 1 0 2023-03-04 10:31:04.600
+!MESSAGE Updating connections up to associations...
+
+!ENTRY com._1c.g5.v8.dt.platform.services.ui 4 0 2023-03-04 10:32:05.662
+!MESSAGE Произошла внутренняя ошибка
+!STACK 0
+com.e1c.g5.dt.applications.ApplicationException: Ошибка открытия соединения с информационной базой
+	at com.e1c.g5.dt.internal.applications.infobases.ui.InfobaseApplicationBehaviourDelegate.publish(InfobaseApplicationBehaviourDelegate.java:109)
+	at com.e1c.g5.dt.internal.applications.ApplicationManager.publish(ApplicationManager.java:275)
+	at com.e1c.g5.dt.applications.IApplicationManager$pbryglu.publish(Unknown Source)
+	at com._1c.g5.v8.dt.internal.platform.services.ui.infobases.deploy.DeployConfigurationWizard.deployConfiguration(DeployConfigurationWizard.java:590)
+	at com._1c.g5.v8.dt.internal.platform.services.ui.infobases.deploy.DeployConfigurationWizard.deployExistingApplications(DeployConfigurationWizard.java:214)
+	at com._1c.g5.v8.dt.internal.platform.services.ui.infobases.deploy.DeployConfigurationWizard.lambda$0(DeployConfigurationWizard.java:167)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+Caused by: com._1c.g5.v8.dt.platform.services.core.infobases.sync.InfobaseSynchronizationException: Ошибка открытия соединения с информационной базой
+	at com._1c.g5.v8.dt.internal.platform.services.core.infobases.sync.connections.DesignerSessionInfobaseConnection.connect(DesignerSessionInfobaseConnection.java:92)
+	at com._1c.g5.v8.dt.internal.platform.services.core.infobases.sync.connections.ParticipantAwareInfobaseConnection.connect(ParticipantAwareInfobaseConnection.java:66)
+	at com._1c.g5.v8.dt.internal.platform.services.core.infobases.sync.connections.ReconnectableInfobaseConnection.ensureConnected(ReconnectableInfobaseConnection.java:201)
+	at com._1c.g5.v8.dt.internal.platform.services.core.infobases.sync.connections.ReconnectableInfobaseConnection.loadObjects(ReconnectableInfobaseConnection.java:133)
+	at com._1c.g5.v8.dt.internal.platform.services.core.infobases.sync.strategies.AbstractSynchronizationStrategy.loadObjects(AbstractSynchronizationStrategy.java:721)
+	at com._1c.g5.v8.dt.internal.platform.services.core.infobases.sync.strategies.OnDemandSynchronizationStrategy.infobaseDatabaseUpdateRequested(OnDemandSynchronizationStrategy.java:119)
+	at com._1c.g5.v8.dt.internal.platform.services.core.infobases.sync.InfobaseSynchronization.updateConnectedInfobase(InfobaseSynchronization.java:609)
+	at com._1c.g5.v8.dt.internal.platform.services.core.infobases.sync.InfobaseSynchronizationManager.updateInfobase(InfobaseSynchronizationManager.java:262)
+	at com._1c.g5.v8.dt.platform.services.core.infobases.sync.IInfobaseSynchronizationManager$pbryglu.updateInfobase(Unknown Source)
+	at com.e1c.g5.dt.internal.applications.infobases.ui.InfobaseApplicationBehaviourDelegate.publish(InfobaseApplicationBehaviourDelegate.java:85)
+	... 6 more
+Caused by: com._1c.g5.v8.dt.platform.services.core.runtimes.execution.RuntimeCoreException: Ошибка взаимодействия с платформой 1С:Предприятия 8.3.21.1709:
+Ошибка блокировки информационной базы для конфигурирования 
+	at com._1c.g5.v8.dt.internal.platform.services.core.runtimes.execution.DesignerSessionPool.connect(DesignerSessionPool.java:553)
+	at com._1c.g5.v8.dt.internal.platform.services.core.runtimes.execution.DesignerSessionPool.createConnection(DesignerSessionPool.java:367)
+	at com._1c.g5.v8.dt.internal.platform.services.core.runtimes.execution.DesignerSessionPool.acquire(DesignerSessionPool.java:247)
+	at com._1c.g5.v8.dt.platform.services.core.runtimes.execution.impl.DesignerSessionThickClientLauncher.openDesignerSession(DesignerSessionThickClientLauncher.java:207)
+	at com._1c.g5.v8.dt.internal.platform.services.core.infobases.sync.connections.DesignerSessionInfobaseConnection.openSession(DesignerSessionInfobaseConnection.java:179)
+	at com._1c.g5.v8.dt.internal.platform.services.core.infobases.sync.connections.DesignerSessionInfobaseConnection.connect(DesignerSessionInfobaseConnection.java:74)
+	... 15 more
+Caused by: com._1c.g5.designer.ssh.client.DesignerDisconnectException: Ошибка блокировки информационной базы для конфигурирования 
+	at com._1c.g5.internal.designer.ssh.client.DisconnectMessageProcessor.process(DisconnectMessageProcessor.java:66)
+	at com._1c.g5.designer.ssh.client.DesignerClient.connect(DesignerClient.java:86)
+	at com._1c.g5.v8.dt.internal.platform.services.core.runtimes.execution.DesignerSessionPool.connect(DesignerSessionPool.java:508)
+	... 20 more
+Caused by: com.jcraft.jsch.JSchException: SSH_MSG_DISCONNECT: -33554432 Ошибка блокировки информационной базы для конфигурирования 
+	at com.jcraft.jsch.Session.read(Session.java:1004)
+	at com.jcraft.jsch.UserAuthPassword.start(UserAuthPassword.java:91)
+	at com.jcraft.jsch.Session.connect(Session.java:470)
+	at com._1c.g5.designer.ssh.client.DesignerClient.connect(DesignerClient.java:69)
+	... 21 more
+
+!ENTRY com._1c.g5.v8.dt.ui 1 0 2023-03-04 10:32:51.884
+!MESSAGE EDT закрывается
+
+!ENTRY com._1c.g5.v8.dt.ui 1 0 2023-03-04 10:32:51.885
+!MESSAGE Существующий проект (на закрытии): Конфигурация, открыт: true
+
+!ENTRY org.eclipse.e4.ui.workbench.swt 1 0 2023-03-04 10:32:52.636
+!MESSAGE Saving dialog settings
+
+!ENTRY com._1c.g5.v8.dt.core 1 0 2023-03-04 10:32:52.758
+!MESSAGE Project context is being stopped: Конфигурация (IDE_SHUTDOWN)
+
+!ENTRY com._1c.g5.v8.dt.platform.services.core 1 0 2023-03-04 10:32:52.894
+!MESSAGE Synchronization data store is closed: /D216/EDT/projects/Услуги/.metadata/.plugins/org.eclipse.core.resources/.projects/Конфигурация/com._1c.g5.v8.dt.platform.services.core/refs/heads/master/infobase-synchronization/6637e6d2-c7c1-4164-9df1-e600fa127f14/SynchronizationData.store
+
+!ENTRY com._1c.g5.v8.dt.platform.services.core 1 0 2023-03-04 10:32:52.894
+!MESSAGE Infobase syncrhonization tracking BM model Конфигурация stopped
+
+!ENTRY com._1c.g5.v8.dt.core 1 0 2023-03-04 10:32:52.907
+!MESSAGE Project context is stopped: Конфигурация
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2023-03-04 10:33:52.947
+!MESSAGE Failed to evaluate: AndExpression [children=[WithExpression [variable=selection, children=[CountExpression [ size=1, mode: 4 EXACT], IterateExpression [type=AND, children=[<instanceof value="com.e1c.g5.dt.applications.infobases.IInfobaseApplication"/>]]]], <test property="wizardCategoryNotEmpty" value="com.e1c.g5.dt.applications.ui.wizard.relocateInfobaseApplication" plug-in activation: lazy/>]]
+!STACK 0
+org.eclipse.core.runtime.CoreException: Error evaluating Property [com.e1c.g5.dt.applications.wizardCategoryNotEmpty, type=class java.util.Arrays$ArrayList, tester=com.e1c.g5.dt.internal.applications.ui.expressions.WizardCategoryPropertyTester@5c5027ac]
+	at org.eclipse.core.internal.expressions.Property.test(Property.java:68)
+	at org.eclipse.core.expressions.TestExpression.evaluate(TestExpression.java:107)
+	at org.eclipse.core.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:54)
+	at org.eclipse.core.expressions.AndExpression.evaluate(AndExpression.java:36)
+	at org.eclipse.ui.internal.services.EvaluationReference.evaluate(EvaluationReference.java:79)
+	at org.eclipse.ui.internal.services.EvaluationReference.evaluate(EvaluationReference.java:109)
+	at org.eclipse.ui.internal.services.EvaluationService.invalidate(EvaluationService.java:248)
+	at org.eclipse.ui.internal.services.EvaluationService.dispose(EvaluationService.java:193)
+	at org.eclipse.ui.internal.services.ServiceLocator$3.run(ServiceLocator.java:182)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.services.ServiceLocator.disposeServices(ServiceLocator.java:179)
+	at org.eclipse.ui.internal.services.ServiceLocator.dispose(ServiceLocator.java:152)
+	at org.eclipse.ui.internal.Workbench.shutdown(Workbench.java:2965)
+	at org.eclipse.ui.internal.Workbench.busyClose(Workbench.java:1124)
+	at org.eclipse.ui.internal.Workbench.lambda$4(Workbench.java:1392)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:74)
+	at org.eclipse.ui.internal.Workbench.close(Workbench.java:1392)
+	at org.eclipse.ui.internal.Workbench.restart(Workbench.java:2477)
+	at org.eclipse.equinox.internal.security.ui.storage.TabContents.deteleDefaultStorage(TabContents.java:221)
+	at org.eclipse.equinox.internal.security.ui.storage.TabContents.lambda$1(TabContents.java:112)
+	at org.eclipse.swt.events.SelectionListener$1.widgetSelected(SelectionListener.java:84)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:252)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:5895)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1516)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:5126)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4581)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:823)
+	at org.eclipse.jface.window.Window.open(Window.java:799)
+	at org.eclipse.ui.internal.OpenPreferencesAction.run(OpenPreferencesAction.java:66)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:474)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:580)
+	at org.eclipse.jface.action.ActionContributionItem.lambda$4(ActionContributionItem.java:414)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:5895)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1516)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:5126)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4581)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1154)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1045)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1440)
+Caused by: com._1c.g5.wiring.ServiceUnavailableException: Service wait timed out after 60 000 milliseconds
+	at com._1c.g5.internal.wiring.ConfigurableImportDecorator$ConfigurableImport.get(ConfigurableImportDecorator.java:80)
+	at org.ops4j.peaberry.util.DelegatingImport.get(DelegatingImport.java:44)
+	at org.ops4j.peaberry.util.decorators.StickyDecorator$StickyImport.get(StickyDecorator.java:81)
+	at org.eclipse.ui.IWorkbench$pbryglu.getNewWizardRegistry(Unknown Source)
+	at com.e1c.g5.dt.internal.applications.ui.expressions.WizardCategoryPropertyTester.test(WizardCategoryPropertyTester.java:32)
+	at org.eclipse.core.internal.expressions.Property.test(Property.java:65)
+	... 59 more
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2023-03-04 10:34:53.004
+!MESSAGE Failed to evaluate: AndExpression [children=[WithExpression [variable=selection, children=[CountExpression [ size=1, mode: 4 EXACT], IterateExpression [type=AND, children=[<instanceof value="com.e1c.g5.dt.applications.infobases.IInfobaseApplication"/>]]]], <test property="wizardCategoryNotEmpty" value="com.e1c.g5.dt.applications.ui.wizard.relocateInfobaseApplication" plug-in activation: lazy/>]]
+!STACK 0
+org.eclipse.core.runtime.CoreException: Error evaluating Property [com.e1c.g5.dt.applications.wizardCategoryNotEmpty, type=class java.util.Arrays$ArrayList, tester=com.e1c.g5.dt.internal.applications.ui.expressions.WizardCategoryPropertyTester@5c5027ac]
+	at org.eclipse.core.internal.expressions.Property.test(Property.java:68)
+	at org.eclipse.core.expressions.TestExpression.evaluate(TestExpression.java:107)
+	at org.eclipse.core.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:54)
+	at org.eclipse.core.expressions.AndExpression.evaluate(AndExpression.java:36)
+	at org.eclipse.ui.internal.services.EvaluationReference.evaluate(EvaluationReference.java:79)
+	at org.eclipse.ui.internal.services.EvaluationReference.evaluate(EvaluationReference.java:109)
+	at org.eclipse.ui.internal.services.EvaluationService.invalidate(EvaluationService.java:248)
+	at org.eclipse.ui.internal.services.EvaluationService.removeEvaluationListener(EvaluationService.java:255)
+	at org.eclipse.ui.internal.handlers.HandlerProxy.dispose(HandlerProxy.java:269)
+	at org.eclipse.ui.internal.handlers.LegacyHandlerService$1.run(LegacyHandlerService.java:258)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.handlers.LegacyHandlerService.clearActivations(LegacyHandlerService.java:254)
+	at org.eclipse.ui.internal.handlers.LegacyHandlerService.dispose(LegacyHandlerService.java:275)
+	at org.eclipse.ui.internal.services.ServiceLocator$3.run(ServiceLocator.java:182)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.services.ServiceLocator.disposeServices(ServiceLocator.java:179)
+	at org.eclipse.ui.internal.services.ServiceLocator.dispose(ServiceLocator.java:152)
+	at org.eclipse.ui.internal.Workbench.shutdown(Workbench.java:2965)
+	at org.eclipse.ui.internal.Workbench.busyClose(Workbench.java:1124)
+	at org.eclipse.ui.internal.Workbench.lambda$4(Workbench.java:1392)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:74)
+	at org.eclipse.ui.internal.Workbench.close(Workbench.java:1392)
+	at org.eclipse.ui.internal.Workbench.restart(Workbench.java:2477)
+	at org.eclipse.equinox.internal.security.ui.storage.TabContents.deteleDefaultStorage(TabContents.java:221)
+	at org.eclipse.equinox.internal.security.ui.storage.TabContents.lambda$1(TabContents.java:112)
+	at org.eclipse.swt.events.SelectionListener$1.widgetSelected(SelectionListener.java:84)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:252)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:5895)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1516)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:5126)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4581)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:823)
+	at org.eclipse.jface.window.Window.open(Window.java:799)
+	at org.eclipse.ui.internal.OpenPreferencesAction.run(OpenPreferencesAction.java:66)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:474)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:580)
+	at org.eclipse.jface.action.ActionContributionItem.lambda$4(ActionContributionItem.java:414)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:5895)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1516)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:5126)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4581)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1154)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1045)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1440)
+Caused by: com._1c.g5.wiring.ServiceUnavailableException: Service wait timed out after 60 000 milliseconds
+	at com._1c.g5.internal.wiring.ConfigurableImportDecorator$ConfigurableImport.get(ConfigurableImportDecorator.java:80)
+	at org.ops4j.peaberry.util.DelegatingImport.get(DelegatingImport.java:44)
+	at org.ops4j.peaberry.util.decorators.StickyDecorator$StickyImport.get(StickyDecorator.java:81)
+	at org.eclipse.ui.IWorkbench$pbryglu.getNewWizardRegistry(Unknown Source)
+	at com.e1c.g5.dt.internal.applications.ui.expressions.WizardCategoryPropertyTester.test(WizardCategoryPropertyTester.java:32)
+	at org.eclipse.core.internal.expressions.Property.test(Property.java:65)
+	... 64 more
+
+!ENTRY com._1c.g5.v8.dt.platform.services.core 1 0 2023-03-04 10:34:53.440
+!MESSAGE All known SSH connectons released
+!SESSION 2023-03-04 10:39:26.589 -----------------------------------------------
+eclipse.buildId=2022.2.4.18
+java.version=11.0.15
+java.vendor=BellSoft
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=ru_RU
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -data /D216/EDT/projects/Услуги
+
+!ENTRY com.company1c.link.agent.publicator 4 0 2023-03-04 10:39:30.796
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+com.company1c.link.agent.exceptions.LinkAgentRuntimeException: MX 21.3 Wildflower ("Wildflower") - не поддерживаемая операционная система.
+	at com.company1c.link.agent.publicator.arch.LinuxBinaryChooser.getDefaultHttpd(LinuxBinaryChooser.java:138)
+	at com.company1c.link.agent.publicator.config.PublicatorPrefInitializer$1.addingService(PublicatorPrefInitializer.java:25)
+	at com.company1c.link.agent.publicator.config.PublicatorPrefInitializer$1.addingService(PublicatorPrefInitializer.java:1)
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:943)
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:1)
+	at org.osgi.util.tracker.AbstractTracked.trackAdding(AbstractTracked.java:256)
+	at org.osgi.util.tracker.AbstractTracked.track(AbstractTracked.java:229)
+	at org.osgi.util.tracker.ServiceTracker$Tracked.serviceChanged(ServiceTracker.java:903)
+	at org.eclipse.osgi.internal.serviceregistry.FilteredServiceListener.serviceChanged(FilteredServiceListener.java:120)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.dispatchEvent(BundleContextImpl.java:956)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:151)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEventPrivileged(ServiceRegistry.java:936)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEvent(ServiceRegistry.java:873)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.register(ServiceRegistrationImpl.java:141)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.registerService(ServiceRegistry.java:261)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.registerService(BundleContextImpl.java:495)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.registerService(BundleContextImpl.java:514)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.registerService(BundleContextImpl.java:1042)
+	at com.company1c.link.agent.publicator.PublicatorAddon.init(PublicatorAddon.java:47)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:995)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.internalInject(InjectorImpl.java:140)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.internalMake(InjectorImpl.java:403)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.make(InjectorImpl.java:344)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.make(ContextInjectionFactory.java:227)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.createFromBundle(ReflectionContributionFactory.java:94)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.doCreate(ReflectionContributionFactory.java:60)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.create(ReflectionContributionFactory.java:37)
+	at org.eclipse.e4.ui.internal.workbench.swt.E4Application.createE4Workbench(E4Application.java:276)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:573)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1440)
+
+!ENTRY com.company1c.link.ide.edt 1 0 2023-03-04 10:39:30.816
+!MESSAGE iLOG: 1C:Link addon is initializing. Web config state is in /D216/EDT/projects/Услуги/.metadata/.plugins/com.company1c.link.ide.edt
+
+!ENTRY com._1c.g5.v8.dt.core 1 0 2023-03-04 10:39:32.601
+!MESSAGE java.vm.name=OpenJDK 64-Bit Server VM
+
+!ENTRY com._1c.g5.v8.dt.core 1 0 2023-03-04 10:39:32.601
+!MESSAGE java.vm.info=mixed mode
+
+!ENTRY com._1c.g5.v8.dt.platform.services.core 1 0 2023-03-04 10:39:33.014
+!MESSAGE Trying to re-establish all non-closed SSH connecton...
+
+!ENTRY com._1c.g5.v8.dt.core 1 0 2023-03-04 10:39:38.818
+!MESSAGE Project context is being started: Конфигурация (EXISTING_DATA_IMPORT)
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-04 10:39:40.007
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@1c274aef
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-04 10:39:40.007
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@1c274aef
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-04 10:39:40.007
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@1c274aef
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-04 10:39:40.008
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@1c274aef
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-04 10:39:40.008
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@1c274aef
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-04 10:39:40.008
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@1c274aef
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-04 10:39:40.008
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@1c274aef
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-04 10:39:40.008
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@1c274aef
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-04 10:39:40.008
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@1c274aef
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-04 10:39:40.011
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@1c274aef
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-04 10:39:40.011
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@1c274aef
+
+!ENTRY org.eclipse.ui.navigator.resources 4 0 2023-03-04 10:39:40.684
+!MESSAGE Required filter org.eclipse.ui.navigator.resources.filters.workingSet is not present. Working set support will not function correctly.
+
+!ENTRY org.eclipse.ui.navigator.resources 4 0 2023-03-04 10:39:40.684
+!MESSAGE 
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-04 10:39:41.046
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@1c274aef
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-04 10:39:41.048
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@1c274aef
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-04 10:39:41.048
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@1c274aef
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-04 10:39:41.049
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@1c274aef
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-04 10:39:41.049
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@1c274aef
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-04 10:39:41.049
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@1c274aef
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-04 10:39:41.054
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@1c274aef
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-04 10:39:41.055
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@1c274aef
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-04 10:39:41.055
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@1c274aef
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-04 10:39:41.055
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@1c274aef
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-04 10:39:41.055
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@1c274aef
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-04 10:39:41.055
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@1c274aef
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-04 10:39:41.055
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@1c274aef
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-04 10:39:41.055
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@1c274aef
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-04 10:39:41.056
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@1c274aef
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-04 10:39:41.056
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@1c274aef
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-04 10:39:41.058
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.check.qfix.components.SingleVariantModelBasicFix$SingleVariantModelFixChangeProcessor for the change type class com.e1c.g5.v8.dt.check.qfix.components.SingleVariantModelBasicFix$SingleVariantModelFixChange which is already served by the processor com.e1c.g5.v8.dt.check.qfix.components.SingleVariantModelBasicFix$SingleVariantModelFixChangeProcessor@772eb732
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-04 10:39:41.062
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.check.qfix.components.SingleVariantModelBasicFix$SingleVariantModelFixChangeProcessor for the change type class com.e1c.g5.v8.dt.check.qfix.components.SingleVariantModelBasicFix$SingleVariantModelFixChange which is already served by the processor com.e1c.g5.v8.dt.check.qfix.components.SingleVariantModelBasicFix$SingleVariantModelFixChangeProcessor@772eb732
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-04 10:39:41.062
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@1c274aef
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-04 10:39:41.062
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@1c274aef
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-04 10:39:41.062
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@1c274aef
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-04 10:39:41.064
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@1c274aef
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-04 10:39:41.064
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@1c274aef
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-04 10:39:41.064
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@1c274aef
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-04 10:39:41.065
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.check.qfix.components.SingleVariantModelBasicFix$SingleVariantModelFixChangeProcessor for the change type class com.e1c.g5.v8.dt.check.qfix.components.SingleVariantModelBasicFix$SingleVariantModelFixChange which is already served by the processor com.e1c.g5.v8.dt.check.qfix.components.SingleVariantModelBasicFix$SingleVariantModelFixChangeProcessor@772eb732
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-04 10:39:41.065
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@1c274aef
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-04 10:39:41.071
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@1c274aef
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-04 10:39:41.071
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@1c274aef
+
+!ENTRY org.eclipse.equinox.security 1 0 2023-03-04 10:40:03.027
+!MESSAGE New secure storage master password was generated (Linux libsecret integration module). 
+
+!ENTRY com._1c.g5.v8.dt.platform.services.core 4 0 2023-03-04 10:41:03.876
+!MESSAGE Ошибка открытия соединения с информационной базой
+!STACK 0
+com._1c.g5.v8.dt.platform.services.core.runtimes.execution.RuntimeCoreException: Ошибка взаимодействия с платформой 1С:Предприятия 8.3.21.1709:
+Ключ защиты программы больше не доступен! Работа программы завершена. 
+	at com._1c.g5.v8.dt.internal.platform.services.core.runtimes.execution.DesignerSessionPool.connect(DesignerSessionPool.java:553)
+	at com._1c.g5.v8.dt.internal.platform.services.core.runtimes.execution.DesignerSessionPool.connect(DesignerSessionPool.java:524)
+	at com._1c.g5.v8.dt.internal.platform.services.core.runtimes.execution.DesignerSessionPool.createConnection(DesignerSessionPool.java:367)
+	at com._1c.g5.v8.dt.internal.platform.services.core.runtimes.execution.DesignerSessionPool.acquire(DesignerSessionPool.java:247)
+	at com._1c.g5.v8.dt.platform.services.core.runtimes.execution.impl.DesignerSessionThickClientLauncher.openDesignerSession(DesignerSessionThickClientLauncher.java:207)
+	at com._1c.g5.v8.dt.internal.platform.services.core.infobases.sync.connections.DesignerSessionInfobaseConnection.openSession(DesignerSessionInfobaseConnection.java:179)
+	at com._1c.g5.v8.dt.internal.platform.services.core.infobases.sync.connections.DesignerSessionInfobaseConnection.connect(DesignerSessionInfobaseConnection.java:74)
+	at com._1c.g5.v8.dt.internal.platform.services.core.infobases.sync.connections.ParticipantAwareInfobaseConnection.connect(ParticipantAwareInfobaseConnection.java:66)
+	at com._1c.g5.v8.dt.internal.platform.services.core.infobases.sync.connections.ReconnectableInfobaseConnection.connect(ReconnectableInfobaseConnection.java:92)
+	at com._1c.g5.v8.dt.internal.platform.services.core.infobases.sync.InfobaseSynchronization.connectAndRestoreState(InfobaseSynchronization.java:196)
+	at com._1c.g5.v8.dt.internal.platform.services.core.infobases.sync.InfobaseSynchronizationManager.connectAndRestoreState(InfobaseSynchronizationManager.java:1036)
+	at com._1c.g5.v8.dt.internal.platform.services.core.infobases.sync.InfobaseSynchronizationManager.connectAndRestoreState(InfobaseSynchronizationManager.java:1011)
+	at com._1c.g5.v8.dt.internal.platform.services.core.infobases.sync.InfobaseSynchronizationManager.connectIfAssociated(InfobaseSynchronizationManager.java:900)
+	at com._1c.g5.v8.dt.internal.platform.services.core.infobases.sync.InfobaseSynchronizationManager.start(InfobaseSynchronizationManager.java:701)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at com._1c.g5.v8.dt.internal.lifecycle.AnnotationRegistration$LifecyclePhaseParticipantMethodInvocation.accept(AnnotationRegistration.java:214)
+	at com._1c.g5.v8.dt.internal.lifecycle.AnnotationRegistration$LifecyclePhaseParticipantMethodInvocation.accept(AnnotationRegistration.java:1)
+	at com._1c.g5.v8.dt.internal.lifecycle.ServicesOrchestrator.performPhase(ServicesOrchestrator.java:267)
+	at com._1c.g5.v8.dt.internal.lifecycle.ServicesOrchestrator.startContext(ServicesOrchestrator.java:206)
+	at com._1c.g5.v8.dt.internal.lifecycle.ServicesOrchestrator.startServices(ServicesOrchestrator.java:77)
+	at com._1c.g5.v8.dt.lifecycle.IServicesOrchestrator$pbryglu.startServices(Unknown Source)
+	at com._1c.g5.v8.dt.internal.core.platform.WorkspaceOrchestrator.startContext(WorkspaceOrchestrator.java:763)
+	at com._1c.g5.v8.dt.internal.core.platform.WorkspaceOrchestrator.startWorkspaceProjects(WorkspaceOrchestrator.java:371)
+	at com._1c.g5.v8.dt.internal.core.lifecycle.DtProjectResourceLifecycleBootstrap$DefaultContextsStartJob.run(DtProjectResourceLifecycleBootstrap.java:696)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: com._1c.g5.designer.ssh.client.DesignerDisconnectException: Ключ защиты программы больше не доступен! Работа программы завершена. 
+	at com._1c.g5.internal.designer.ssh.client.DisconnectMessageProcessor.process(DisconnectMessageProcessor.java:66)
+	at com._1c.g5.designer.ssh.client.DesignerClient.connect(DesignerClient.java:86)
+	at com._1c.g5.v8.dt.internal.platform.services.core.runtimes.execution.DesignerSessionPool.connect(DesignerSessionPool.java:508)
+	... 27 more
+Caused by: com.jcraft.jsch.JSchException: SSH_MSG_DISCONNECT: -33554432 Ключ защиты программы больше не доступен! Работа программы завершена. 
+	at com.jcraft.jsch.Session.read(Session.java:1004)
+	at com.jcraft.jsch.UserAuthPassword.start(UserAuthPassword.java:91)
+	at com.jcraft.jsch.Session.connect(Session.java:470)
+	at com._1c.g5.designer.ssh.client.DesignerClient.connect(DesignerClient.java:69)
+	... 28 more
+
+!ENTRY com._1c.g5.v8.dt.platform.services.core 1 0 2023-03-04 10:41:03.893
+!MESSAGE Synchronization data store is opened: /D216/EDT/projects/Услуги/.metadata/.plugins/org.eclipse.core.resources/.projects/Конфигурация/com._1c.g5.v8.dt.platform.services.core/refs/heads/master/infobase-synchronization/6637e6d2-c7c1-4164-9df1-e600fa127f14/SynchronizationData.store
+
+!ENTRY com._1c.g5.v8.dt.platform.services.core 1 0 2023-03-04 10:41:03.893
+!MESSAGE Infobase syncrhonization tracking BM model Конфигурация started
+
+!ENTRY com._1c.g5.v8.dt.core 1 0 2023-03-04 10:41:03.972
+!MESSAGE Project context is started: Конфигурация
+
+!ENTRY com._1c.g5.v8.dt.platform.services.core 1 0 2023-03-04 10:41:55.971
+!MESSAGE Updating connections up to associations...
+
+!ENTRY com.e1c.g5.dt.applications.ui 4 0 2023-03-04 10:43:14.485
+!MESSAGE Ошибка открытия соединения с информационной базой
+Ошибка взаимодействия с платформой 1С:Предприятия 8.3.21.1709:
+Ключ защиты программы больше не доступен! Работа программы завершена. 
+Ключ защиты программы больше не доступен! Работа программы завершена. 
+SSH_MSG_DISCONNECT: -33554432 Ключ защиты программы больше не доступен! Работа программы завершена. 
+!STACK 0
+com.e1c.g5.dt.applications.ApplicationException: Ошибка открытия соединения с информационной базой
+	at com.e1c.g5.dt.internal.applications.infobases.ui.InfobaseApplicationBehaviourDelegate.publish(InfobaseApplicationBehaviourDelegate.java:109)
+	at com.e1c.g5.dt.internal.applications.ApplicationManager.publish(ApplicationManager.java:275)
+	at com.e1c.g5.dt.applications.IApplicationManager$pbryglu.publish(Unknown Source)
+	at com.e1c.g5.dt.internal.applications.ui.ApplicationUiSupport.ensureUpdated(ApplicationUiSupport.java:117)
+	at com.e1c.g5.dt.applications.ui.IApplicationUiSupport$pbryglu.ensureUpdated(Unknown Source)
+	at com._1c.g5.v8.dt.internal.launching.ui.statushandlers.ApplicationUpdateStatusHandler.handleStatus(ApplicationUpdateStatusHandler.java:46)
+	at com._1c.g5.v8.dt.debug.core.launchconfigurations.CustomErrorHandlingLaunchDelegate.handleStatus(CustomErrorHandlingLaunchDelegate.java:209)
+	at com._1c.g5.v8.dt.launching.core.launchconfigurations.AbstractRuntimeDebugAwareLaunchDelegate.updateApplication(AbstractRuntimeDebugAwareLaunchDelegate.java:218)
+	at com._1c.g5.v8.dt.internal.launching.core.launchconfigurations.RuntimeClientLaunchDelegate.doLaunch(RuntimeClientLaunchDelegate.java:173)
+	at com._1c.g5.v8.dt.debug.core.launchconfigurations.CustomErrorHandlingLaunchDelegate.launch(CustomErrorHandlingLaunchDelegate.java:56)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:803)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1021)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1224)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: com._1c.g5.v8.dt.platform.services.core.infobases.sync.InfobaseSynchronizationException: Ошибка открытия соединения с информационной базой
+	at com._1c.g5.v8.dt.internal.platform.services.core.infobases.sync.connections.DesignerSessionInfobaseConnection.connect(DesignerSessionInfobaseConnection.java:92)
+	at com._1c.g5.v8.dt.internal.platform.services.core.infobases.sync.connections.ParticipantAwareInfobaseConnection.connect(ParticipantAwareInfobaseConnection.java:66)
+	at com._1c.g5.v8.dt.internal.platform.services.core.infobases.sync.connections.ReconnectableInfobaseConnection.ensureConnected(ReconnectableInfobaseConnection.java:201)
+	at com._1c.g5.v8.dt.internal.platform.services.core.infobases.sync.connections.ReconnectableInfobaseConnection.loadObjects(ReconnectableInfobaseConnection.java:133)
+	at com._1c.g5.v8.dt.internal.platform.services.core.infobases.sync.strategies.AbstractSynchronizationStrategy.loadObjects(AbstractSynchronizationStrategy.java:721)
+	at com._1c.g5.v8.dt.internal.platform.services.core.infobases.sync.strategies.OnDemandSynchronizationStrategy.infobaseDatabaseUpdateRequested(OnDemandSynchronizationStrategy.java:119)
+	at com._1c.g5.v8.dt.internal.platform.services.core.infobases.sync.InfobaseSynchronization.updateConnectedInfobase(InfobaseSynchronization.java:609)
+	at com._1c.g5.v8.dt.internal.platform.services.core.infobases.sync.InfobaseSynchronizationManager.updateInfobase(InfobaseSynchronizationManager.java:262)
+	at com._1c.g5.v8.dt.platform.services.core.infobases.sync.IInfobaseSynchronizationManager$pbryglu.updateInfobase(Unknown Source)
+	at com.e1c.g5.dt.internal.applications.infobases.ui.InfobaseApplicationBehaviourDelegate.publish(InfobaseApplicationBehaviourDelegate.java:85)
+	... 14 more
+Caused by: com._1c.g5.v8.dt.platform.services.core.runtimes.execution.RuntimeCoreException: Ошибка взаимодействия с платформой 1С:Предприятия 8.3.21.1709:
+Ключ защиты программы больше не доступен! Работа программы завершена. 
+	at com._1c.g5.v8.dt.internal.platform.services.core.runtimes.execution.DesignerSessionPool.connect(DesignerSessionPool.java:553)
+	at com._1c.g5.v8.dt.internal.platform.services.core.runtimes.execution.DesignerSessionPool.connect(DesignerSessionPool.java:524)
+	at com._1c.g5.v8.dt.internal.platform.services.core.runtimes.execution.DesignerSessionPool.createConnection(DesignerSessionPool.java:367)
+	at com._1c.g5.v8.dt.internal.platform.services.core.runtimes.execution.DesignerSessionPool.acquire(DesignerSessionPool.java:247)
+	at com._1c.g5.v8.dt.platform.services.core.runtimes.execution.impl.DesignerSessionThickClientLauncher.openDesignerSession(DesignerSessionThickClientLauncher.java:207)
+	at com._1c.g5.v8.dt.internal.platform.services.core.infobases.sync.connections.DesignerSessionInfobaseConnection.openSession(DesignerSessionInfobaseConnection.java:179)
+	at com._1c.g5.v8.dt.internal.platform.services.core.infobases.sync.connections.DesignerSessionInfobaseConnection.connect(DesignerSessionInfobaseConnection.java:74)
+	... 23 more
+Caused by: com._1c.g5.designer.ssh.client.DesignerDisconnectException: Ключ защиты программы больше не доступен! Работа программы завершена. 
+	at com._1c.g5.internal.designer.ssh.client.DisconnectMessageProcessor.process(DisconnectMessageProcessor.java:66)
+	at com._1c.g5.designer.ssh.client.DesignerClient.connect(DesignerClient.java:86)
+	at com._1c.g5.v8.dt.internal.platform.services.core.runtimes.execution.DesignerSessionPool.connect(DesignerSessionPool.java:508)
+	... 29 more
+Caused by: com.jcraft.jsch.JSchException: SSH_MSG_DISCONNECT: -33554432 Ключ защиты программы больше не доступен! Работа программы завершена. 
+	at com.jcraft.jsch.Session.read(Session.java:1004)
+	at com.jcraft.jsch.UserAuthPassword.start(UserAuthPassword.java:91)
+	at com.jcraft.jsch.Session.connect(Session.java:470)
+	at com._1c.g5.designer.ssh.client.DesignerClient.connect(DesignerClient.java:69)
+	... 30 more
+
+!ENTRY com._1c.g5.v8.dt.platform.services.core 4 0 2023-03-04 10:49:11.281
+!MESSAGE Ошибка открытия соединения с информационной базой
+!STACK 0
+com._1c.g5.v8.dt.platform.services.core.runtimes.execution.RuntimeCoreException: Ошибка взаимодействия с платформой 1С:Предприятия 8.3.21.1709:
+Текущему соединению с информационной базой не назначен сеанс 
+	at com._1c.g5.v8.dt.internal.platform.services.core.runtimes.execution.DesignerSessionPool.connect(DesignerSessionPool.java:553)
+	at com._1c.g5.v8.dt.internal.platform.services.core.runtimes.execution.DesignerSessionPool.connect(DesignerSessionPool.java:524)
+	at com._1c.g5.v8.dt.internal.platform.services.core.runtimes.execution.DesignerSessionPool.createConnection(DesignerSessionPool.java:367)
+	at com._1c.g5.v8.dt.internal.platform.services.core.runtimes.execution.DesignerSessionPool.acquire(DesignerSessionPool.java:247)
+	at com._1c.g5.v8.dt.platform.services.core.runtimes.execution.impl.DesignerSessionThickClientLauncher.openDesignerSession(DesignerSessionThickClientLauncher.java:207)
+	at com._1c.g5.v8.dt.internal.platform.services.core.infobases.sync.connections.DesignerSessionInfobaseConnection.openSession(DesignerSessionInfobaseConnection.java:179)
+	at com._1c.g5.v8.dt.internal.platform.services.core.infobases.sync.connections.DesignerSessionInfobaseConnection.connect(DesignerSessionInfobaseConnection.java:74)
+	at com._1c.g5.v8.dt.internal.platform.services.core.infobases.sync.connections.ParticipantAwareInfobaseConnection.connect(ParticipantAwareInfobaseConnection.java:66)
+	at com._1c.g5.v8.dt.internal.platform.services.core.infobases.sync.connections.ReconnectableInfobaseConnection.connect(ReconnectableInfobaseConnection.java:92)
+	at com._1c.g5.v8.dt.internal.platform.services.core.infobases.sync.InfobaseSynchronization.reconnect(InfobaseSynchronization.java:491)
+	at com._1c.g5.v8.dt.internal.platform.services.core.infobases.sync.InfobaseSynchronizationManager.reconnect(InfobaseSynchronizationManager.java:1308)
+	at com._1c.g5.v8.dt.internal.platform.services.core.infobases.sync.InfobaseSynchronizationManager.installationAccessSettingsChanged(InfobaseSynchronizationManager.java:563)
+	at com._1c.g5.v8.dt.internal.platform.services.core.infobases.InfobaseAccessManager.lambda$2(InfobaseAccessManager.java:346)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:948)
+	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:658)
+	at com._1c.g5.v8.dt.internal.platform.services.core.infobases.InfobaseAccessManager.fireInstallationStoredEvent(InfobaseAccessManager.java:346)
+	at com._1c.g5.v8.dt.internal.platform.services.core.infobases.InfobaseAccessManager.storeInstallation(InfobaseAccessManager.java:250)
+	at com._1c.g5.v8.dt.platform.services.core.infobases.IInfobaseAccessManager$pbryglu.storeInstallation(Unknown Source)
+	at com.e1c.g5.dt.internal.applications.ui.editor.infobases.aef.model.InfobaseAccessSettingsModel.lambda$0(InfobaseAccessSettingsModel.java:78)
+	at com.e1c.g5.dt.applications.ui.editor.ApplicationEditorTasks$ApplicationEditorTask.run(ApplicationEditorTasks.java:76)
+	at com.e1c.g5.dt.internal.applications.ui.editor.ApplicationEditingContext$Operation.execute(ApplicationEditingContext.java:191)
+	at org.eclipse.core.commands.operations.DefaultOperationHistory.execute(DefaultOperationHistory.java:496)
+	at com.e1c.g5.dt.internal.applications.ui.editor.ApplicationEditingContext.lambda$0(ApplicationEditingContext.java:73)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+Caused by: com._1c.g5.designer.ssh.client.DesignerDisconnectException: Текущему соединению с информационной базой не назначен сеанс 
+	at com._1c.g5.internal.designer.ssh.client.DisconnectMessageProcessor.process(DisconnectMessageProcessor.java:66)
+	at com._1c.g5.designer.ssh.client.DesignerClient.connect(DesignerClient.java:86)
+	at com._1c.g5.v8.dt.internal.platform.services.core.runtimes.execution.DesignerSessionPool.connect(DesignerSessionPool.java:508)
+	... 23 more
+Caused by: com.jcraft.jsch.JSchException: SSH_MSG_DISCONNECT: -33554432 Текущему соединению с информационной базой не назначен сеанс 
+	at com.jcraft.jsch.Session.read(Session.java:1004)
+	at com.jcraft.jsch.UserAuthPassword.start(UserAuthPassword.java:91)
+	at com.jcraft.jsch.Session.connect(Session.java:470)
+	at com._1c.g5.designer.ssh.client.DesignerClient.connect(DesignerClient.java:69)
+	... 24 more
+
+!ENTRY com.e1c.g5.dt.applications.ui.editor 4 0 2023-03-04 10:49:11.282
+!MESSAGE NullPointerException
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.ui.internal.PartSite.getShell(PartSite.java:442)
+	at com.e1c.g5.dt.internal.applications.ui.editor.ApplicationEditor.refreshDirty(ApplicationEditor.java:299)
+	at com.e1c.g5.dt.internal.applications.ui.editor.ApplicationEditor$1.changed(ApplicationEditor.java:205)
+	at com.e1c.g5.dt.internal.applications.ui.editor.ApplicationEditingContext$Operation.lambda$0(ApplicationEditingContext.java:193)
+	at com.e1c.g5.dt.internal.applications.ui.editor.ApplicationEditingContext.notifyListeners(ApplicationEditingContext.java:157)
+	at com.e1c.g5.dt.internal.applications.ui.editor.ApplicationEditingContext$Operation.execute(ApplicationEditingContext.java:193)
+	at org.eclipse.core.commands.operations.DefaultOperationHistory.execute(DefaultOperationHistory.java:496)
+	at com.e1c.g5.dt.internal.applications.ui.editor.ApplicationEditingContext.lambda$0(ApplicationEditingContext.java:73)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+
+!ENTRY com._1c.g5.v8.dt.platform.services.core 1 0 2023-03-04 10:55:39.198
+!MESSAGE Updating connections up to associations...
+
+!ENTRY com._1c.g5.v8.dt.platform.services.core 4 0 2023-03-04 10:55:43.577
+!MESSAGE Ошибка сохранения описания сессии конфигурирования
+!STACK 0
+org.eclipse.equinox.security.storage.StorageException: No password provided.
+	at org.eclipse.equinox.internal.security.storage.SecurePreferencesRoot.getModulePassword(SecurePreferencesRoot.java:311)
+	at org.eclipse.equinox.internal.security.storage.SecurePreferencesRoot.getPassword(SecurePreferencesRoot.java:230)
+	at org.eclipse.equinox.internal.security.storage.SecurePreferences.put(SecurePreferences.java:229)
+	at org.eclipse.equinox.internal.security.storage.SecurePreferencesWrapper.put(SecurePreferencesWrapper.java:128)
+	at com._1c.g5.v8.dt.internal.platform.services.core.runtimes.execution.DesignerSessionStore.store(DesignerSessionStore.java:71)
+	at com._1c.g5.v8.dt.internal.platform.services.core.runtimes.execution.DesignerSessionPool.createConnection(DesignerSessionPool.java:382)
+	at com._1c.g5.v8.dt.internal.platform.services.core.runtimes.execution.DesignerSessionPool.acquire(DesignerSessionPool.java:247)
+	at com._1c.g5.v8.dt.platform.services.core.runtimes.execution.impl.DesignerSessionThickClientLauncher.openDesignerSession(DesignerSessionThickClientLauncher.java:207)
+	at com._1c.g5.v8.dt.internal.platform.services.core.infobases.sync.connections.DesignerSessionInfobaseConnection.openSession(DesignerSessionInfobaseConnection.java:179)
+	at com._1c.g5.v8.dt.internal.platform.services.core.infobases.sync.connections.DesignerSessionInfobaseConnection.connect(DesignerSessionInfobaseConnection.java:74)
+	at com._1c.g5.v8.dt.internal.platform.services.core.infobases.sync.connections.ParticipantAwareInfobaseConnection.connect(ParticipantAwareInfobaseConnection.java:66)
+	at com._1c.g5.v8.dt.internal.platform.services.core.infobases.sync.connections.ReconnectableInfobaseConnection.ensureConnected(ReconnectableInfobaseConnection.java:201)
+	at com._1c.g5.v8.dt.internal.platform.services.core.infobases.sync.connections.ReconnectableInfobaseConnection.loadObjects(ReconnectableInfobaseConnection.java:133)
+	at com._1c.g5.v8.dt.internal.platform.services.core.infobases.sync.strategies.AbstractSynchronizationStrategy.loadObjects(AbstractSynchronizationStrategy.java:721)
+	at com._1c.g5.v8.dt.internal.platform.services.core.infobases.sync.strategies.OnDemandSynchronizationStrategy.infobaseDatabaseUpdateRequested(OnDemandSynchronizationStrategy.java:119)
+	at com._1c.g5.v8.dt.internal.platform.services.core.infobases.sync.InfobaseSynchronization.updateConnectedInfobase(InfobaseSynchronization.java:609)
+	at com._1c.g5.v8.dt.internal.platform.services.core.infobases.sync.InfobaseSynchronizationManager.updateInfobase(InfobaseSynchronizationManager.java:262)
+	at com._1c.g5.v8.dt.platform.services.core.infobases.sync.IInfobaseSynchronizationManager$pbryglu.updateInfobase(Unknown Source)
+	at com.e1c.g5.dt.internal.applications.infobases.ui.InfobaseApplicationBehaviourDelegate.publish(InfobaseApplicationBehaviourDelegate.java:85)
+	at com.e1c.g5.dt.internal.applications.ApplicationManager.publish(ApplicationManager.java:275)
+	at com.e1c.g5.dt.applications.IApplicationManager$pbryglu.publish(Unknown Source)
+	at com.e1c.g5.dt.internal.applications.ui.ApplicationUiSupport.ensureUpdated(ApplicationUiSupport.java:117)
+	at com.e1c.g5.dt.applications.ui.IApplicationUiSupport$pbryglu.ensureUpdated(Unknown Source)
+	at com._1c.g5.v8.dt.internal.launching.ui.statushandlers.ApplicationUpdateStatusHandler.handleStatus(ApplicationUpdateStatusHandler.java:46)
+	at com._1c.g5.v8.dt.debug.core.launchconfigurations.CustomErrorHandlingLaunchDelegate.handleStatus(CustomErrorHandlingLaunchDelegate.java:209)
+	at com._1c.g5.v8.dt.launching.core.launchconfigurations.AbstractRuntimeDebugAwareLaunchDelegate.updateApplication(AbstractRuntimeDebugAwareLaunchDelegate.java:218)
+	at com._1c.g5.v8.dt.internal.launching.core.launchconfigurations.RuntimeClientLaunchDelegate.doLaunch(RuntimeClientLaunchDelegate.java:173)
+	at com._1c.g5.v8.dt.debug.core.launchconfigurations.CustomErrorHandlingLaunchDelegate.launch(CustomErrorHandlingLaunchDelegate.java:56)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:803)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:716)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1021)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$2.run(DebugUIPlugin.java:1224)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com._1c.g5.v8.dt.platform.services.core 1 0 2023-03-04 10:55:43.818
+!MESSAGE SSH connecton with infobase Услуги established.
+
+!ENTRY com._1c.g5.v8.dt.platform.services.core 1 0 2023-03-04 10:55:43.819
+!MESSAGE Project "Конфигурация" is connected to infobase "Услуги"
+
+!ENTRY com._1c.g5.v8.dt.platform.services.core 1 0 2023-03-04 10:55:46.099
+!MESSAGE ConfigDumpInfo.xml is stored for "Конфигурация"
