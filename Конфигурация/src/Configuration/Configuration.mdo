@@ -50,6 +50,7 @@
   <commonPictures>CommonPicture.РасчетЗарплаты</commonPictures>
   <commonPictures>CommonPicture.УчетМатериалов</commonPictures>
   <commonModules>CommonModule.РаботаСДокументамиКлиент</commonModules>
+  <commonModules>CommonModule.РаботаСоСправочникамиВызовСервера</commonModules>
   <catalogs>Catalog.Клиенты</catalogs>
   <catalogs>Catalog.Номенклатура</catalogs>
   <catalogs>Catalog.Склады</catalogs>
@@ -57,5 +58,6 @@
   <documents>Document.ОказаниеУслуги</documents>
   <documents>Document.ПриходнаяНакладная</documents>
   <reports>Report.Материалы</reports>
+  <informationRegisters>InformationRegister.Цены</informationRegisters>
   <accumulationRegisters>AccumulationRegister.ОстаткиМатериалов</accumulationRegisters>
 </mdclass:Configuration>
