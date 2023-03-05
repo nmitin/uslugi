@@ -27,6 +27,7 @@
   <numberAllowedLength>Variable</numberAllowedLength>
   <checkUnique>true</checkUnique>
   <autonumbering>true</autonumbering>
+  <defaultObjectForm>Document.ОказаниеУслуги.Form.ФормаДокумента</defaultObjectForm>
   <registerRecords>AccumulationRegister.ОстаткиМатериалов</registerRecords>
   <postInPrivilegedMode>true</postInPrivilegedMode>
   <unpostInPrivilegedMode>true</unpostInPrivilegedMode>
@@ -79,6 +80,15 @@
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
+  <forms uuid="11c118ff-1dea-4613-849e-f6257201a412">
+    <name>ФормаДокумента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма документа</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
   <tabularSections uuid="0d7e6047-e53d-45a6-853c-9dd11e0ea34a">
     <producedTypes>
       <objectType typeId="8b9cf54e-cf30-40d0-825a-3173de907844" valueTypeId="856d51d1-d4db-4277-97e1-1fb0c5c502d0"/>
@@ -146,10 +156,10 @@
       <fullTextSearch>Use</fullTextSearch>
     </attributes>
     <attributes uuid="cd5384b5-6b8d-492d-9c94-6a1bfd06df62">
-      <name>Сумама</name>
+      <name>Сумма</name>
       <synonym>
         <key>ru</key>
-        <value>Сумама</value>
+        <value>Сумма</value>
       </synonym>
       <type>
         <types>Number</types>
@@ -166,4 +176,13 @@
       <fullTextSearch>Use</fullTextSearch>
     </attributes>
   </tabularSections>
+  <commands uuid="cefa3d09-e9b5-4c29-a9bd-fc589e4cd216">
+    <name>Печать</name>
+    <group>FormCommandBarImportant</group>
+    <commandParameterType>
+      <types>DocumentRef.ОказаниеУслуги</types>
+    </commandParameterType>
+    <parameterUseMode>Multiple</parameterUseMode>
+    <representation>Auto</representation>
+  </commands>
 </mdclass:Document>
