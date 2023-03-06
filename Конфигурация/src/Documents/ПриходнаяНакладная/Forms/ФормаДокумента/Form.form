@@ -219,10 +219,6 @@
       <dataPath xsi:type="form:DataPath">
         <segments>Объект.Материалы.Материал</segments>
       </dataPath>
-      <handlers>
-        <event>OnChange</event>
-        <name>МатериалыМатериалПриИзменении</name>
-      </handlers>
       <extendedTooltip>
         <name>МатериалыМатериалРасширеннаяПодсказка</name>
         <id>28</id>

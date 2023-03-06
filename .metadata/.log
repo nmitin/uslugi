@@ -2461,3 +2461,615 @@ Caused by: org.apache.sshd.common.SshException: No more authentication methods a
 
 !ENTRY org.eclipse.egit.ui 4 0 2023-03-05 22:02:31.952
 !MESSAGE Can't connect to any repository: git@github.com:nmitin/uslugi.git (git@github.com:nmitin/uslugi.git: Cannot log in at github.com:22)
+
+!ENTRY com._1c.g5.v8.dt.ui 1 0 2023-03-05 22:04:59.710
+!MESSAGE EDT закрывается
+
+!ENTRY com._1c.g5.v8.dt.ui 1 0 2023-03-05 22:04:59.710
+!MESSAGE Существующий проект (на закрытии): Конфигурация, открыт: true
+
+!ENTRY org.eclipse.e4.ui.workbench.swt 1 0 2023-03-05 22:05:00.206
+!MESSAGE Saving dialog settings
+
+!ENTRY com._1c.g5.v8.dt.core 1 0 2023-03-05 22:05:00.328
+!MESSAGE Project context is being stopped: Конфигурация (IDE_SHUTDOWN)
+
+!ENTRY com._1c.g5.v8.dt.platform.services.core 1 0 2023-03-05 22:05:00.518
+!MESSAGE SSH connecton with infobase Услуги released
+
+!ENTRY com._1c.g5.v8.dt.platform.services.core 1 0 2023-03-05 22:05:00.519
+!MESSAGE Project "Конфигурация" is disconnected from infobase "Услуги"
+
+!ENTRY com._1c.g5.v8.dt.platform.services.core 1 0 2023-03-05 22:05:00.520
+!MESSAGE Synchronization data store is closed: /D216/EDT/projects/Услуги/.metadata/.plugins/org.eclipse.core.resources/.projects/Конфигурация/com._1c.g5.v8.dt.platform.services.core/refs/heads/master/infobase-synchronization/6637e6d2-c7c1-4164-9df1-e600fa127f14/SynchronizationData.store
+
+!ENTRY com._1c.g5.v8.dt.platform.services.core 1 0 2023-03-05 22:05:00.520
+!MESSAGE Infobase syncrhonization tracking BM model Конфигурация stopped
+
+!ENTRY com._1c.g5.v8.dt.core 1 0 2023-03-05 22:05:00.533
+!MESSAGE Project context is stopped: Конфигурация
+
+!ENTRY com._1c.g5.v8.dt.platform.services.core 1 0 2023-03-05 22:05:00.814
+!MESSAGE All known SSH connectons released
+!SESSION 2023-03-06 09:26:17.265 -----------------------------------------------
+eclipse.buildId=2022.2.4.18
+java.version=11.0.15
+java.vendor=BellSoft
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=ru_RU
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -data /D216/EDT/projects/Услуги
+
+!ENTRY com.company1c.link.agent.publicator 4 0 2023-03-06 09:26:47.228
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+com.company1c.link.agent.exceptions.LinkAgentRuntimeException: MX 21.3 Wildflower ("Wildflower") - не поддерживаемая операционная система.
+	at com.company1c.link.agent.publicator.arch.LinuxBinaryChooser.getDefaultHttpd(LinuxBinaryChooser.java:138)
+	at com.company1c.link.agent.publicator.config.PublicatorPrefInitializer$1.addingService(PublicatorPrefInitializer.java:25)
+	at com.company1c.link.agent.publicator.config.PublicatorPrefInitializer$1.addingService(PublicatorPrefInitializer.java:1)
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:943)
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:1)
+	at org.osgi.util.tracker.AbstractTracked.trackAdding(AbstractTracked.java:256)
+	at org.osgi.util.tracker.AbstractTracked.track(AbstractTracked.java:229)
+	at org.osgi.util.tracker.ServiceTracker$Tracked.serviceChanged(ServiceTracker.java:903)
+	at org.eclipse.osgi.internal.serviceregistry.FilteredServiceListener.serviceChanged(FilteredServiceListener.java:120)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.dispatchEvent(BundleContextImpl.java:956)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:151)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEventPrivileged(ServiceRegistry.java:936)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEvent(ServiceRegistry.java:873)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.register(ServiceRegistrationImpl.java:141)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.registerService(ServiceRegistry.java:261)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.registerService(BundleContextImpl.java:495)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.registerService(BundleContextImpl.java:514)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.registerService(BundleContextImpl.java:1042)
+	at com.company1c.link.agent.publicator.PublicatorAddon.init(PublicatorAddon.java:47)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:995)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.internalInject(InjectorImpl.java:140)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.internalMake(InjectorImpl.java:403)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.make(InjectorImpl.java:344)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.make(ContextInjectionFactory.java:227)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.createFromBundle(ReflectionContributionFactory.java:94)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.doCreate(ReflectionContributionFactory.java:60)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.create(ReflectionContributionFactory.java:37)
+	at org.eclipse.e4.ui.internal.workbench.swt.E4Application.createE4Workbench(E4Application.java:276)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:573)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1440)
+
+!ENTRY com.company1c.link.ide.edt 1 0 2023-03-06 09:26:47.378
+!MESSAGE iLOG: 1C:Link addon is initializing. Web config state is in /D216/EDT/projects/Услуги/.metadata/.plugins/com.company1c.link.ide.edt
+
+!ENTRY com._1c.g5.v8.dt.platform.services.core 1 0 2023-03-06 09:26:54.966
+!MESSAGE Trying to re-establish all non-closed SSH connecton...
+
+!ENTRY com._1c.g5.v8.dt.core 1 0 2023-03-06 09:26:55.310
+!MESSAGE java.vm.name=OpenJDK 64-Bit Server VM
+
+!ENTRY com._1c.g5.v8.dt.core 1 0 2023-03-06 09:26:55.310
+!MESSAGE java.vm.info=mixed mode
+
+!ENTRY com._1c.g5.v8.dt.core 1 0 2023-03-06 09:27:07.648
+!MESSAGE Project context is being started: Конфигурация (EXISTING_DATA_IMPORT)
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-06 09:27:10.211
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@45d2a7e7
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-06 09:27:10.212
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@45d2a7e7
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-06 09:27:10.215
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@45d2a7e7
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-06 09:27:10.216
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@45d2a7e7
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-06 09:27:10.216
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@45d2a7e7
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-06 09:27:10.216
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@45d2a7e7
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-06 09:27:10.218
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@45d2a7e7
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-06 09:27:10.218
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@45d2a7e7
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-06 09:27:10.218
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@45d2a7e7
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-06 09:27:10.223
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@45d2a7e7
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-06 09:27:10.223
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@45d2a7e7
+
+!ENTRY org.eclipse.ui.navigator.resources 4 0 2023-03-06 09:27:11.421
+!MESSAGE Required filter org.eclipse.ui.navigator.resources.filters.workingSet is not present. Working set support will not function correctly.
+
+!ENTRY org.eclipse.ui.navigator.resources 4 0 2023-03-06 09:27:11.421
+!MESSAGE 
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-06 09:27:11.962
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@45d2a7e7
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-06 09:27:11.962
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@45d2a7e7
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-06 09:27:11.963
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@45d2a7e7
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-06 09:27:11.963
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@45d2a7e7
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-06 09:27:11.963
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@45d2a7e7
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-06 09:27:11.963
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@45d2a7e7
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-06 09:27:11.963
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@45d2a7e7
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-06 09:27:11.963
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@45d2a7e7
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-06 09:27:11.964
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@45d2a7e7
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-06 09:27:11.964
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@45d2a7e7
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-06 09:27:11.964
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@45d2a7e7
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-06 09:27:11.964
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@45d2a7e7
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-06 09:27:11.964
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@45d2a7e7
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-06 09:27:11.965
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@45d2a7e7
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-06 09:27:11.965
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@45d2a7e7
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-06 09:27:11.965
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@45d2a7e7
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-06 09:27:11.982
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.check.qfix.components.SingleVariantModelBasicFix$SingleVariantModelFixChangeProcessor for the change type class com.e1c.g5.v8.dt.check.qfix.components.SingleVariantModelBasicFix$SingleVariantModelFixChange which is already served by the processor com.e1c.g5.v8.dt.check.qfix.components.SingleVariantModelBasicFix$SingleVariantModelFixChangeProcessor@2be1e47c
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-06 09:27:11.985
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.check.qfix.components.SingleVariantModelBasicFix$SingleVariantModelFixChangeProcessor for the change type class com.e1c.g5.v8.dt.check.qfix.components.SingleVariantModelBasicFix$SingleVariantModelFixChange which is already served by the processor com.e1c.g5.v8.dt.check.qfix.components.SingleVariantModelBasicFix$SingleVariantModelFixChangeProcessor@2be1e47c
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-06 09:27:11.985
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@45d2a7e7
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-06 09:27:11.985
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@45d2a7e7
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-06 09:27:11.986
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@45d2a7e7
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-06 09:27:11.993
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@45d2a7e7
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-06 09:27:11.993
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@45d2a7e7
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-06 09:27:11.993
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@45d2a7e7
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-06 09:27:11.994
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.check.qfix.components.SingleVariantModelBasicFix$SingleVariantModelFixChangeProcessor for the change type class com.e1c.g5.v8.dt.check.qfix.components.SingleVariantModelBasicFix$SingleVariantModelFixChange which is already served by the processor com.e1c.g5.v8.dt.check.qfix.components.SingleVariantModelBasicFix$SingleVariantModelFixChangeProcessor@2be1e47c
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-06 09:27:11.994
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@45d2a7e7
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-06 09:27:11.995
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@45d2a7e7
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-06 09:27:11.995
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@45d2a7e7
+
+!ENTRY org.eclipse.equinox.security 1 0 2023-03-06 09:28:19.758
+!MESSAGE New secure storage master password was generated (Linux libsecret integration module). 
+
+!ENTRY com._1c.g5.v8.dt.platform.services.core 4 0 2023-03-06 09:29:20.446
+!MESSAGE Ошибка открытия соединения с информационной базой
+!STACK 0
+com._1c.g5.v8.dt.platform.services.core.runtimes.execution.RuntimeCoreException: Ошибка взаимодействия с платформой 1С:Предприятия 8.3.21.1709:
+Ключ защиты программы больше не доступен! Работа программы завершена. 
+	at com._1c.g5.v8.dt.internal.platform.services.core.runtimes.execution.DesignerSessionPool.connect(DesignerSessionPool.java:553)
+	at com._1c.g5.v8.dt.internal.platform.services.core.runtimes.execution.DesignerSessionPool.connect(DesignerSessionPool.java:524)
+	at com._1c.g5.v8.dt.internal.platform.services.core.runtimes.execution.DesignerSessionPool.createConnection(DesignerSessionPool.java:367)
+	at com._1c.g5.v8.dt.internal.platform.services.core.runtimes.execution.DesignerSessionPool.acquire(DesignerSessionPool.java:247)
+	at com._1c.g5.v8.dt.platform.services.core.runtimes.execution.impl.DesignerSessionThickClientLauncher.openDesignerSession(DesignerSessionThickClientLauncher.java:207)
+	at com._1c.g5.v8.dt.internal.platform.services.core.infobases.sync.connections.DesignerSessionInfobaseConnection.openSession(DesignerSessionInfobaseConnection.java:179)
+	at com._1c.g5.v8.dt.internal.platform.services.core.infobases.sync.connections.DesignerSessionInfobaseConnection.connect(DesignerSessionInfobaseConnection.java:74)
+	at com._1c.g5.v8.dt.internal.platform.services.core.infobases.sync.connections.ParticipantAwareInfobaseConnection.connect(ParticipantAwareInfobaseConnection.java:66)
+	at com._1c.g5.v8.dt.internal.platform.services.core.infobases.sync.connections.ReconnectableInfobaseConnection.connect(ReconnectableInfobaseConnection.java:92)
+	at com._1c.g5.v8.dt.internal.platform.services.core.infobases.sync.InfobaseSynchronization.connectAndRestoreState(InfobaseSynchronization.java:196)
+	at com._1c.g5.v8.dt.internal.platform.services.core.infobases.sync.InfobaseSynchronizationManager.connectAndRestoreState(InfobaseSynchronizationManager.java:1036)
+	at com._1c.g5.v8.dt.internal.platform.services.core.infobases.sync.InfobaseSynchronizationManager.connectAndRestoreState(InfobaseSynchronizationManager.java:1011)
+	at com._1c.g5.v8.dt.internal.platform.services.core.infobases.sync.InfobaseSynchronizationManager.connectIfAssociated(InfobaseSynchronizationManager.java:900)
+	at com._1c.g5.v8.dt.internal.platform.services.core.infobases.sync.InfobaseSynchronizationManager.start(InfobaseSynchronizationManager.java:701)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at com._1c.g5.v8.dt.internal.lifecycle.AnnotationRegistration$LifecyclePhaseParticipantMethodInvocation.accept(AnnotationRegistration.java:214)
+	at com._1c.g5.v8.dt.internal.lifecycle.AnnotationRegistration$LifecyclePhaseParticipantMethodInvocation.accept(AnnotationRegistration.java:1)
+	at com._1c.g5.v8.dt.internal.lifecycle.ServicesOrchestrator.performPhase(ServicesOrchestrator.java:267)
+	at com._1c.g5.v8.dt.internal.lifecycle.ServicesOrchestrator.startContext(ServicesOrchestrator.java:206)
+	at com._1c.g5.v8.dt.internal.lifecycle.ServicesOrchestrator.startServices(ServicesOrchestrator.java:77)
+	at com._1c.g5.v8.dt.lifecycle.IServicesOrchestrator$pbryglu.startServices(Unknown Source)
+	at com._1c.g5.v8.dt.internal.core.platform.WorkspaceOrchestrator.startContext(WorkspaceOrchestrator.java:763)
+	at com._1c.g5.v8.dt.internal.core.platform.WorkspaceOrchestrator.startWorkspaceProjects(WorkspaceOrchestrator.java:371)
+	at com._1c.g5.v8.dt.internal.core.lifecycle.DtProjectResourceLifecycleBootstrap$DefaultContextsStartJob.run(DtProjectResourceLifecycleBootstrap.java:696)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: com._1c.g5.designer.ssh.client.DesignerDisconnectException: Ключ защиты программы больше не доступен! Работа программы завершена. 
+	at com._1c.g5.internal.designer.ssh.client.DisconnectMessageProcessor.process(DisconnectMessageProcessor.java:66)
+	at com._1c.g5.designer.ssh.client.DesignerClient.connect(DesignerClient.java:86)
+	at com._1c.g5.v8.dt.internal.platform.services.core.runtimes.execution.DesignerSessionPool.connect(DesignerSessionPool.java:508)
+	... 27 more
+Caused by: com.jcraft.jsch.JSchException: SSH_MSG_DISCONNECT: -33554432 Ключ защиты программы больше не доступен! Работа программы завершена. 
+	at com.jcraft.jsch.Session.read(Session.java:1004)
+	at com.jcraft.jsch.UserAuthPassword.start(UserAuthPassword.java:91)
+	at com.jcraft.jsch.Session.connect(Session.java:470)
+	at com._1c.g5.designer.ssh.client.DesignerClient.connect(DesignerClient.java:69)
+	... 28 more
+
+!ENTRY com._1c.g5.v8.dt.platform.services.core 1 0 2023-03-06 09:29:20.501
+!MESSAGE Synchronization data store is opened: /D216/EDT/projects/Услуги/.metadata/.plugins/org.eclipse.core.resources/.projects/Конфигурация/com._1c.g5.v8.dt.platform.services.core/refs/heads/master/infobase-synchronization/6637e6d2-c7c1-4164-9df1-e600fa127f14/SynchronizationData.store
+
+!ENTRY com._1c.g5.v8.dt.platform.services.core 1 0 2023-03-06 09:29:20.501
+!MESSAGE Infobase syncrhonization tracking BM model Конфигурация started
+
+!ENTRY com._1c.g5.v8.dt.core 1 0 2023-03-06 09:29:20.796
+!MESSAGE Project context is started: Конфигурация
+
+!ENTRY com._1c.g5.v8.dt.platform.services.core 1 0 2023-03-06 09:37:56.736
+!MESSAGE Updating connections up to associations...
+
+!ENTRY com._1c.g5.v8.dt.platform.services.core 4 0 2023-03-06 09:38:00.986
+!MESSAGE Ошибка сохранения описания сессии конфигурирования
+!STACK 0
+org.eclipse.equinox.security.storage.StorageException: No password provided.
+	at org.eclipse.equinox.internal.security.storage.SecurePreferencesRoot.getModulePassword(SecurePreferencesRoot.java:311)
+	at org.eclipse.equinox.internal.security.storage.SecurePreferencesRoot.getPassword(SecurePreferencesRoot.java:230)
+	at org.eclipse.equinox.internal.security.storage.SecurePreferences.put(SecurePreferences.java:229)
+	at org.eclipse.equinox.internal.security.storage.SecurePreferencesWrapper.put(SecurePreferencesWrapper.java:128)
+	at com._1c.g5.v8.dt.internal.platform.services.core.runtimes.execution.DesignerSessionStore.store(DesignerSessionStore.java:71)
+	at com._1c.g5.v8.dt.internal.platform.services.core.runtimes.execution.DesignerSessionPool.createConnection(DesignerSessionPool.java:382)
+	at com._1c.g5.v8.dt.internal.platform.services.core.runtimes.execution.DesignerSessionPool.acquire(DesignerSessionPool.java:247)
+	at com._1c.g5.v8.dt.platform.services.core.runtimes.execution.impl.DesignerSessionThickClientLauncher.openDesignerSession(DesignerSessionThickClientLauncher.java:207)
+	at com._1c.g5.v8.dt.internal.platform.services.core.infobases.sync.connections.DesignerSessionInfobaseConnection.openSession(DesignerSessionInfobaseConnection.java:179)
+	at com._1c.g5.v8.dt.internal.platform.services.core.infobases.sync.connections.DesignerSessionInfobaseConnection.connect(DesignerSessionInfobaseConnection.java:74)
+	at com._1c.g5.v8.dt.internal.platform.services.core.infobases.sync.connections.ParticipantAwareInfobaseConnection.connect(ParticipantAwareInfobaseConnection.java:66)
+	at com._1c.g5.v8.dt.internal.platform.services.core.infobases.sync.connections.ReconnectableInfobaseConnection.ensureConnected(ReconnectableInfobaseConnection.java:201)
+	at com._1c.g5.v8.dt.internal.platform.services.core.infobases.sync.connections.ReconnectableInfobaseConnection.updateDatabase(ReconnectableInfobaseConnection.java:157)
+	at com._1c.g5.v8.dt.internal.platform.services.core.infobases.sync.strategies.OnDemandSynchronizationStrategy.infobaseDatabaseUpdateRequested(OnDemandSynchronizationStrategy.java:135)
+	at com._1c.g5.v8.dt.internal.platform.services.core.infobases.sync.InfobaseSynchronization.updateConnectedInfobase(InfobaseSynchronization.java:609)
+	at com._1c.g5.v8.dt.internal.platform.services.core.infobases.sync.InfobaseSynchronizationManager.updateInfobase(InfobaseSynchronizationManager.java:262)
+	at com._1c.g5.v8.dt.platform.services.core.infobases.sync.IInfobaseSynchronizationManager$pbryglu.updateInfobase(Unknown Source)
+	at com.e1c.g5.dt.internal.applications.infobases.ui.InfobaseApplicationBehaviourDelegate.publish(InfobaseApplicationBehaviourDelegate.java:85)
+	at com.e1c.g5.dt.internal.applications.ApplicationManager.publish(ApplicationManager.java:275)
+	at com.e1c.g5.dt.applications.IApplicationManager$pbryglu.publish(Unknown Source)
+	at com._1c.g5.v8.dt.internal.platform.services.ui.infobases.actions.UpdateApplicationsHandler.lambda$2(UpdateApplicationsHandler.java:146)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+
+!ENTRY com._1c.g5.v8.dt.platform.services.core 1 0 2023-03-06 09:38:01.264
+!MESSAGE SSH connecton with infobase Услуги established.
+
+!ENTRY com._1c.g5.v8.dt.platform.services.core 1 0 2023-03-06 09:38:01.264
+!MESSAGE Project "Конфигурация" is connected to infobase "Услуги"
+
+!ENTRY com._1c.g5.v8.dt.ui 1 0 2023-03-06 11:10:10.696
+!MESSAGE EDT закрывается
+
+!ENTRY com._1c.g5.v8.dt.ui 1 0 2023-03-06 11:10:10.697
+!MESSAGE Существующий проект (на закрытии): Конфигурация, открыт: true
+
+!ENTRY org.eclipse.e4.ui.workbench.swt 1 0 2023-03-06 11:10:11.142
+!MESSAGE Saving dialog settings
+
+!ENTRY com._1c.g5.v8.dt.core 1 0 2023-03-06 11:10:11.355
+!MESSAGE Project context is being stopped: Конфигурация (IDE_SHUTDOWN)
+
+!ENTRY com._1c.g5.v8.dt.platform.services.core 1 0 2023-03-06 11:10:11.561
+!MESSAGE SSH connecton with infobase Услуги released
+
+!ENTRY com._1c.g5.v8.dt.platform.services.core 1 0 2023-03-06 11:10:11.562
+!MESSAGE Project "Конфигурация" is disconnected from infobase "Услуги"
+
+!ENTRY com._1c.g5.v8.dt.platform.services.core 1 0 2023-03-06 11:10:11.563
+!MESSAGE Synchronization data store is closed: /D216/EDT/projects/Услуги/.metadata/.plugins/org.eclipse.core.resources/.projects/Конфигурация/com._1c.g5.v8.dt.platform.services.core/refs/heads/master/infobase-synchronization/6637e6d2-c7c1-4164-9df1-e600fa127f14/SynchronizationData.store
+
+!ENTRY com._1c.g5.v8.dt.platform.services.core 1 0 2023-03-06 11:10:11.563
+!MESSAGE Infobase syncrhonization tracking BM model Конфигурация stopped
+
+!ENTRY com._1c.g5.v8.dt.core 1 0 2023-03-06 11:10:11.576
+!MESSAGE Project context is stopped: Конфигурация
+
+!ENTRY com._1c.g5.v8.dt.platform.services.core 1 0 2023-03-06 11:10:12.087
+!MESSAGE All known SSH connectons released
+!SESSION 2023-03-06 13:16:24.607 -----------------------------------------------
+eclipse.buildId=2022.2.4.18
+java.version=11.0.15
+java.vendor=BellSoft
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=ru_RU
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -data /D216/EDT/projects/Услуги
+
+!ENTRY com.company1c.link.agent.publicator 4 0 2023-03-06 13:16:28.700
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+com.company1c.link.agent.exceptions.LinkAgentRuntimeException: MX 21.3 Wildflower ("Wildflower") - не поддерживаемая операционная система.
+	at com.company1c.link.agent.publicator.arch.LinuxBinaryChooser.getDefaultHttpd(LinuxBinaryChooser.java:138)
+	at com.company1c.link.agent.publicator.config.PublicatorPrefInitializer$1.addingService(PublicatorPrefInitializer.java:25)
+	at com.company1c.link.agent.publicator.config.PublicatorPrefInitializer$1.addingService(PublicatorPrefInitializer.java:1)
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:943)
+	at org.osgi.util.tracker.ServiceTracker$Tracked.customizerAdding(ServiceTracker.java:1)
+	at org.osgi.util.tracker.AbstractTracked.trackAdding(AbstractTracked.java:256)
+	at org.osgi.util.tracker.AbstractTracked.track(AbstractTracked.java:229)
+	at org.osgi.util.tracker.ServiceTracker$Tracked.serviceChanged(ServiceTracker.java:903)
+	at org.eclipse.osgi.internal.serviceregistry.FilteredServiceListener.serviceChanged(FilteredServiceListener.java:120)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.dispatchEvent(BundleContextImpl.java:956)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:151)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEventPrivileged(ServiceRegistry.java:936)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.publishServiceEvent(ServiceRegistry.java:873)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistrationImpl.register(ServiceRegistrationImpl.java:141)
+	at org.eclipse.osgi.internal.serviceregistry.ServiceRegistry.registerService(ServiceRegistry.java:261)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.registerService(BundleContextImpl.java:495)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.registerService(BundleContextImpl.java:514)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.registerService(BundleContextImpl.java:1042)
+	at com.company1c.link.agent.publicator.PublicatorAddon.init(PublicatorAddon.java:47)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:995)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.internalInject(InjectorImpl.java:140)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.internalMake(InjectorImpl.java:403)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.make(InjectorImpl.java:344)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.make(ContextInjectionFactory.java:227)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.createFromBundle(ReflectionContributionFactory.java:94)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.doCreate(ReflectionContributionFactory.java:60)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.create(ReflectionContributionFactory.java:37)
+	at org.eclipse.e4.ui.internal.workbench.swt.E4Application.createE4Workbench(E4Application.java:276)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:573)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1440)
+
+!ENTRY com.company1c.link.ide.edt 1 0 2023-03-06 13:16:28.722
+!MESSAGE iLOG: 1C:Link addon is initializing. Web config state is in /D216/EDT/projects/Услуги/.metadata/.plugins/com.company1c.link.ide.edt
+
+!ENTRY com._1c.g5.v8.dt.core 1 0 2023-03-06 13:16:30.615
+!MESSAGE java.vm.name=OpenJDK 64-Bit Server VM
+
+!ENTRY com._1c.g5.v8.dt.core 1 0 2023-03-06 13:16:30.615
+!MESSAGE java.vm.info=mixed mode
+
+!ENTRY com._1c.g5.v8.dt.platform.services.core 1 0 2023-03-06 13:16:30.983
+!MESSAGE Trying to re-establish all non-closed SSH connecton...
+
+!ENTRY com._1c.g5.v8.dt.core 1 0 2023-03-06 13:16:36.379
+!MESSAGE Project context is being started: Конфигурация (EXISTING_DATA_IMPORT)
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-06 13:16:37.771
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@1c8587b6
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-06 13:16:37.772
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@1c8587b6
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-06 13:16:37.772
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@1c8587b6
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-06 13:16:37.772
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@1c8587b6
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-06 13:16:37.772
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@1c8587b6
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-06 13:16:37.772
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@1c8587b6
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-06 13:16:37.772
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@1c8587b6
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-06 13:16:37.773
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@1c8587b6
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-06 13:16:37.773
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@1c8587b6
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-06 13:16:37.774
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@1c8587b6
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-06 13:16:37.774
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@1c8587b6
+
+!ENTRY org.eclipse.ui.navigator.resources 4 0 2023-03-06 13:16:38.213
+!MESSAGE Required filter org.eclipse.ui.navigator.resources.filters.workingSet is not present. Working set support will not function correctly.
+
+!ENTRY org.eclipse.ui.navigator.resources 4 0 2023-03-06 13:16:38.213
+!MESSAGE 
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-06 13:16:38.830
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@1c8587b6
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-06 13:16:38.831
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@1c8587b6
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-06 13:16:38.831
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@1c8587b6
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-06 13:16:38.832
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@1c8587b6
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-06 13:16:38.832
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@1c8587b6
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-06 13:16:38.832
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@1c8587b6
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-06 13:16:38.832
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@1c8587b6
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-06 13:16:38.833
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@1c8587b6
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-06 13:16:38.833
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@1c8587b6
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-06 13:16:38.835
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@1c8587b6
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-06 13:16:38.840
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@1c8587b6
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-06 13:16:38.841
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@1c8587b6
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-06 13:16:38.847
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@1c8587b6
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-06 13:16:38.847
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@1c8587b6
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-06 13:16:38.847
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@1c8587b6
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-06 13:16:38.847
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@1c8587b6
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-06 13:16:38.865
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.check.qfix.components.SingleVariantModelBasicFix$SingleVariantModelFixChangeProcessor for the change type class com.e1c.g5.v8.dt.check.qfix.components.SingleVariantModelBasicFix$SingleVariantModelFixChange which is already served by the processor com.e1c.g5.v8.dt.check.qfix.components.SingleVariantModelBasicFix$SingleVariantModelFixChangeProcessor@1586e1c1
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-06 13:16:38.868
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.check.qfix.components.SingleVariantModelBasicFix$SingleVariantModelFixChangeProcessor for the change type class com.e1c.g5.v8.dt.check.qfix.components.SingleVariantModelBasicFix$SingleVariantModelFixChange which is already served by the processor com.e1c.g5.v8.dt.check.qfix.components.SingleVariantModelBasicFix$SingleVariantModelFixChangeProcessor@1586e1c1
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-06 13:16:38.868
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@1c8587b6
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-06 13:16:38.868
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@1c8587b6
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-06 13:16:38.868
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@1c8587b6
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-06 13:16:38.870
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@1c8587b6
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-06 13:16:38.871
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@1c8587b6
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-06 13:16:38.871
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@1c8587b6
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-06 13:16:38.872
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.check.qfix.components.SingleVariantModelBasicFix$SingleVariantModelFixChangeProcessor for the change type class com.e1c.g5.v8.dt.check.qfix.components.SingleVariantModelBasicFix$SingleVariantModelFixChange which is already served by the processor com.e1c.g5.v8.dt.check.qfix.components.SingleVariantModelBasicFix$SingleVariantModelFixChangeProcessor@1586e1c1
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-06 13:16:38.872
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@1c8587b6
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-06 13:16:38.872
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@1c8587b6
+
+!ENTRY com.e1c.g5.v8.dt.check 1 0 2023-03-06 13:16:38.872
+!MESSAGE The attempt to change processor class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor for the change type class com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChange which is already served by the processor com.e1c.g5.v8.dt.bsl.check.qfix.SingleVariantXtextBslModuleFix$SingleVariantModuleFixChangeProcessor@1c8587b6
+
+!ENTRY com._1c.g5.v8.dt.platform.services.core 4 0 2023-03-06 13:16:42.965
+!MESSAGE Ошибка сохранения описания сессии конфигурирования
+!STACK 0
+org.eclipse.equinox.security.storage.StorageException: No password provided.
+	at org.eclipse.equinox.internal.security.storage.SecurePreferencesRoot.getModulePassword(SecurePreferencesRoot.java:311)
+	at org.eclipse.equinox.internal.security.storage.SecurePreferencesRoot.getPassword(SecurePreferencesRoot.java:230)
+	at org.eclipse.equinox.internal.security.storage.SecurePreferences.put(SecurePreferences.java:229)
+	at org.eclipse.equinox.internal.security.storage.SecurePreferencesWrapper.put(SecurePreferencesWrapper.java:128)
+	at com._1c.g5.v8.dt.internal.platform.services.core.runtimes.execution.DesignerSessionStore.store(DesignerSessionStore.java:71)
+	at com._1c.g5.v8.dt.internal.platform.services.core.runtimes.execution.DesignerSessionPool.createConnection(DesignerSessionPool.java:382)
+	at com._1c.g5.v8.dt.internal.platform.services.core.runtimes.execution.DesignerSessionPool.acquire(DesignerSessionPool.java:247)
+	at com._1c.g5.v8.dt.platform.services.core.runtimes.execution.impl.DesignerSessionThickClientLauncher.openDesignerSession(DesignerSessionThickClientLauncher.java:207)
+	at com._1c.g5.v8.dt.internal.platform.services.core.infobases.sync.connections.DesignerSessionInfobaseConnection.openSession(DesignerSessionInfobaseConnection.java:179)
+	at com._1c.g5.v8.dt.internal.platform.services.core.infobases.sync.connections.DesignerSessionInfobaseConnection.connect(DesignerSessionInfobaseConnection.java:74)
+	at com._1c.g5.v8.dt.internal.platform.services.core.infobases.sync.connections.ParticipantAwareInfobaseConnection.connect(ParticipantAwareInfobaseConnection.java:66)
+	at com._1c.g5.v8.dt.internal.platform.services.core.infobases.sync.connections.ReconnectableInfobaseConnection.connect(ReconnectableInfobaseConnection.java:92)
+	at com._1c.g5.v8.dt.internal.platform.services.core.infobases.sync.InfobaseSynchronization.connectAndRestoreState(InfobaseSynchronization.java:196)
+	at com._1c.g5.v8.dt.internal.platform.services.core.infobases.sync.InfobaseSynchronizationManager.connectAndRestoreState(InfobaseSynchronizationManager.java:1036)
+	at com._1c.g5.v8.dt.internal.platform.services.core.infobases.sync.InfobaseSynchronizationManager.connectAndRestoreState(InfobaseSynchronizationManager.java:1011)
+	at com._1c.g5.v8.dt.internal.platform.services.core.infobases.sync.InfobaseSynchronizationManager.connectIfAssociated(InfobaseSynchronizationManager.java:900)
+	at com._1c.g5.v8.dt.internal.platform.services.core.infobases.sync.InfobaseSynchronizationManager.start(InfobaseSynchronizationManager.java:701)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at com._1c.g5.v8.dt.internal.lifecycle.AnnotationRegistration$LifecyclePhaseParticipantMethodInvocation.accept(AnnotationRegistration.java:214)
+	at com._1c.g5.v8.dt.internal.lifecycle.AnnotationRegistration$LifecyclePhaseParticipantMethodInvocation.accept(AnnotationRegistration.java:1)
+	at com._1c.g5.v8.dt.internal.lifecycle.ServicesOrchestrator.performPhase(ServicesOrchestrator.java:267)
+	at com._1c.g5.v8.dt.internal.lifecycle.ServicesOrchestrator.startContext(ServicesOrchestrator.java:206)
+	at com._1c.g5.v8.dt.internal.lifecycle.ServicesOrchestrator.startServices(ServicesOrchestrator.java:77)
+	at com._1c.g5.v8.dt.lifecycle.IServicesOrchestrator$pbryglu.startServices(Unknown Source)
+	at com._1c.g5.v8.dt.internal.core.platform.WorkspaceOrchestrator.startContext(WorkspaceOrchestrator.java:763)
+	at com._1c.g5.v8.dt.internal.core.platform.WorkspaceOrchestrator.startWorkspaceProjects(WorkspaceOrchestrator.java:371)
+	at com._1c.g5.v8.dt.internal.core.lifecycle.DtProjectResourceLifecycleBootstrap$DefaultContextsStartJob.run(DtProjectResourceLifecycleBootstrap.java:696)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com._1c.g5.v8.dt.platform.services.core 1 0 2023-03-06 13:16:43.230
+!MESSAGE SSH connecton with infobase Услуги established.
+
+!ENTRY com._1c.g5.v8.dt.platform.services.core 1 0 2023-03-06 13:16:43.231
+!MESSAGE Project "Конфигурация" is connected to infobase "Услуги"
+
+!ENTRY com._1c.g5.v8.dt.platform.services.core 1 0 2023-03-06 13:16:43.261
+!MESSAGE Synchronization data store is opened: /D216/EDT/projects/Услуги/.metadata/.plugins/org.eclipse.core.resources/.projects/Конфигурация/com._1c.g5.v8.dt.platform.services.core/refs/heads/master/infobase-synchronization/6637e6d2-c7c1-4164-9df1-e600fa127f14/SynchronizationData.store
+
+!ENTRY com._1c.g5.v8.dt.platform.services.core 1 0 2023-03-06 13:16:43.261
+!MESSAGE Infobase syncrhonization tracking BM model Конфигурация started
+
+!ENTRY com._1c.g5.v8.dt.core 1 0 2023-03-06 13:16:43.396
+!MESSAGE Project context is started: Конфигурация
+
+!ENTRY com._1c.g5.v8.dt.platform.services.core 1 0 2023-03-06 13:18:41.268
+!MESSAGE Updating connections up to associations...
+
+!ENTRY com._1c.g5.v8.dt.platform.services.core 1 0 2023-03-06 13:20:10.622
+!MESSAGE Updating connections up to associations...
